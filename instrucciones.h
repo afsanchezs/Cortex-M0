@@ -3,6 +3,7 @@
 * \param registro[a] Registro para el resultado
 * \param registro[b] Registro de ingreso para sumar
 * \param Num Valor  a sumar
+*/
 int ADD (int registro[a],int registro[b], int Num);
 int ADDS(int registro[a],int registro[b], int registro[c]);
 int ORR (int registro[a],int registro[b], int registro[c]);
