@@ -1,30 +1,30 @@
 #include "instrucciones.c"
-int ADD(long int registro[a], long int registro [b], int Num)
+int ADD(int registro[a], int registro [b], int Num)
 {
 	registro[a]=registro[b]+Num;
 	return registro[a];
 }
-int ADDS(long int registro[a],long int registro[b], int registro[c])
+int ADDS(int registro[a],int registro[b], int registro[c])
 {
 	registro [a]=registro[b]+registro[c];
 	return registro[a];
 }
-int ORR (long int registro[a],long int registro[b], int registro[c])
+int ORR (int registro[a],int registro[b], int registro[c])
 {
 	registro [a]=registro[b] | registro[c];
 	return registro[a];
 }
-int EOR (long int registro[a],long int registro[b], int registro[c])
+int EOR (int registro[a],int registro[b], int registro[c])
 {
 	registro [a]=registro[b] ^ registro[c];
 	return registro[a];
 }
-int MOV (long int registro[a],long int registro[b])
+int MOV (int registro[a],int registro[b])
 {
 	registro [a]=registro[b];
 	return registro[a];
 }
-int AND (long int registro[a],long int registro[b], int registro[c])
+int AND (int registro[a],int registro[b], int registro[c])
 {
 	registro [a]=registro[b] & registro[c];
 	return registro[a];
