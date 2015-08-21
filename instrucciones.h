@@ -4,9 +4,9 @@
 * \param registro[b] Registro de ingreso para sumar
 * \param Num Valor  a sumar
 */
-int ADD (int registro[a],int registro[b], int Num);
-int ADDS(int registro[a],int registro[b], int registro[c]);
-int ORR (int registro[a],int registro[b], int registro[c]);
-int EOR (int registro[a],int registro[b], int registro[c]);
-int MOV (int registro[a],int registro[b]);
-int AND (int registro[a],int registro[b], int registro[c]);
+int ADD (int R1,int R2, int R3);
+int ADDS(int R1,int R2, int R3);
+int ORR (int R1,int R2, int R3;
+int EOR (int R1,int R2, int R3);
+int MOV (int R1,int R2);
+int AND (int R1,int R2, int R3);
