@@ -3,7 +3,7 @@
 * \param R1 Registro para el resultado.
 * \param R2 Registro de ingreso para sumar.
 * \param Num Valor  a sumar.
-* \return Resultado de la operacion sumar
+* \return Retorna como resultado de la operacion sumar un entero
 */
 int ADD (int R1,int R2, int Num);
 /**
@@ -11,7 +11,7 @@ int ADD (int R1,int R2, int Num);
 * \param R1 Registro para el resultado.
 * \param R2 Primer registro de ingreso a sumar.
 * \param R3 Segundo registro de ingreso a sumar.
-* \return Resultado de la operacion sumar
+* \return Retorna como resultado de la operacion sumar un entero
 */
 int ADDS(int R1,int R2, int R3);
 /**
@@ -19,7 +19,7 @@ int ADDS(int R1,int R2, int R3);
 * \param R1 Registro para el resultado
 * \param R2 Primer registro de ingreso para ORR.
 * \param R3 Segundo registro de ingreso para ORR.
-* \return Resultado de la operacion ORR
+* \return Retorna como resultado de la operacion ORR un entero
 */
 int ORR (int R1,int R2, int R3;
 /**
@@ -27,14 +27,14 @@ int ORR (int R1,int R2, int R3;
 * \param R1 Registro para el resultado.
 * \param R2 Primer registro de ingreso para EOR
 * \param R3 Segundo registro de ingreso para EOR.
-* \return Resultado de la operacion EOR
+* \return Retorna como resultado de la operacion EOR un entero
 */
 int EOR (int R1,int R2, int R3);
 /**
 * \brief Funcion para realizar MOV (reemplazar el valor de un registro en otro)
 * \param R1 Registro para el resultado
 * \param R2 Registro de ingreso para  MOV (posicion en la cual se va a mover el valor del registro)
-* \return Resultado de la operacion Mov
+* \return Retorna como resultado de la operacion Mov un entero
 */
 int MOV (int R1,int R2);
 /**
@@ -42,6 +42,6 @@ int MOV (int R1,int R2);
 * \param R1 Registro para el resultado
 * \param R2 Primer registro de ingreso para AND
 * \param R3 Segundo registro de ingreso para AND
-* \return Resultado de la operacion AND
+* \return Retorna como resultado de la operacion AND un entero
 */
 int AND (int R1,int R2, int R3);
