@@ -29,3 +29,8 @@ int AND (int R1,int R2, int R3)
 	R1=R2 & R3;
 	return R1;
 }
+int SUB (int R1,int R2, int R3)
+{
+	R1=R2-R3;
+	return R1;
+}
