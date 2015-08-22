@@ -45,3 +45,4 @@ int MOV (int R1,int R2);
 * \return Retorna como resultado de la operacion AND un entero
 */
 int AND (int R1,int R2, int R3);
+int SUB (int R1,int R2, int R3);
