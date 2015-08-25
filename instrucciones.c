@@ -4,7 +4,7 @@ int ADD(int Rdm, int Rn, int Num)
 	Rdm=Rn+Num;
 	return Rdm;
 }
-int ADDS(int Rdm,int Rn, Rm)
+int ADDS(int Rdm,int Rn,int Rm)
 {
 	Rdm=Rn+Rm;
 	return Rdm;
