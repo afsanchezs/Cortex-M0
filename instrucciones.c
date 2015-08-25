@@ -1,4 +1,4 @@
-#include "instrucciones.c"
+#include "instrucciones.h"
 int ADD(int R1, int R2, int Num)
 {
 	R1=R2+Num;
