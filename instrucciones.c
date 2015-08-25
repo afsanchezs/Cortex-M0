@@ -1,36 +1,36 @@
 #include "instrucciones.h"
-int ADD(int R1, int R2, int Num)
+int ADD(int Rdm, int Rn, int Num)
 {
-	R1=R2+Num;
+	Rdm=Rn+Num;
+	return Rdm;
+}
+int ADDS(int Rdm,int Rn, Rm)
+{
+	Rdm=Rn+Rm;
+	return Rdm;
+}
+int ORR (int Rdm,int Rn, int Rm)
+{
+	Rdm=Rn | Rm;
+	return Rdm;
+}
+int EOR (int Rdm,int Rn, int Rm)
+{
+	Rdm=Rn ^ Rm;
 	return R1;
 }
-int ADDS(int R1,int R2, R3)
+int MOV (int Rdm,int Rn)
 {
-	R1=R2+R3;
-	return R1;
+	Rdm=Rn;
+	return Rdm;
 }
-int ORR (int R1,int R2, int R3)
+int AND (int Rdm,int Rn, int Rm)
 {
-	R1=R2 | R3;
-	return R1;
+	Rdm=Rn & Rm;
+	return Rdm;
 }
-int EOR (int R1,int R2, int R3)
+int SUB (int Rdm,int Rn, int Rm)
 {
-	R1=R2 ^ R3;
-	return R1;
-}
-int MOV (int R1,int R2)
-{
-	R1=R2;
-	return R1;
-}
-int AND (int R1,int R2, int R3)
-{
-	R1=R2 & R3;
-	return R1;
-}
-int SUB (int R1,int R2, int R3)
-{
-	R1=R2-R3;
-	return R1;
+	Rdm=Rn-Rm;
+	return Rdm;
 }
