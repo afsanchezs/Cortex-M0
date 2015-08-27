@@ -37,37 +37,37 @@ int SUB (int Rd,int Rn, int Rm)
 int Bandera (int Rd, int Rn, int Rm)
 {
 if (Rd>127)
-	{
-		N=1;
-	}
+{
+	N=1;
+}
 if (Rd=(128 || 256)
-	{
-		Z=1;
-	}
+{
+	Z=1;
+}
 if (Rd>255)
-	{
-		C=1;
-	}
+{
+	C=1;
+}
 if (Rd>127)
+{
+	if ((Rn<127)&&(Rm<127))
 	{
-		if ((Rn<127)&&(Rm<127))
-			{
-				V=1;
-			}
-		else 
-			{
-				V=0;
-			}
+		V=1;
 	}
+	else 
+	{
+		V=0;
+	}
+}
 else 
+{
+	if ((Rn>127)&&(Rm>127))
 	{
-		if ((Rn>127)&&(Rm>127))
-			{
-				V=1;
-			}
-		else 
-			{
-				V=0;
-			}		
+		V=1;
 	}
+	else 
+	{
+		V=0;
+	}		
+}
 }
