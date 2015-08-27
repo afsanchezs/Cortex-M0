@@ -53,3 +53,13 @@ int AND (int Rd,int Rn, int Rm);
  * \return Retorna como resultdo un entero
  */
 int SUB (int Rd,int Rn, int Rm);
+/** brief Funcion generadoras de banderas.
+* \ param Rd Resultado de la operacion.
+* \ param Rn Primer valor de operacion.
+* \ param Rm Segundo valor de operacion.
+* \ return N Bandera de negativo.
+* \ return Z Bandera de cero.
+* \ return C Bandera de acarreo.
+* \ return V Bandera de sobre flujo. 
+*/
+int Bandera (int Rd, int Rn, int Rm);
