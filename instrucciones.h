@@ -63,3 +63,55 @@ int SUB (int Rd,int Rn, int Rm);
 * \ return V Bandera de sobre flujo. 
 */
 int Bandera (int Rd, int Rn, int Rm);
+/** brief Funcion desplazamiento hacia la izquierda ingresando un numero a sumar.
+* \ param Rd Resultado de la operacion.
+* \ param Rn Valor del registro a sumar.
+* \ param Num Valor a sumar.
+* \ return void.
+*/
+void LSL(unsigned long Rd, unsigned long Rn, int Num);
+/** biref Funcion desplazamiento hacia la izquierda con dos registros.
+* \ param Rd Resultado de la operacion.
+* \ param Rn Valor del registro a sumar.
+* \ return void.
+*/
+void LSLS(unsigned long Rd, unsigned long Rn);
+/** brief Funcion desplazamiento hacia la derecha con un numero a sumar.
+* \ param Rd Resultado de la operacion
+* \ param Rn Valor del registro a sumar.
+* \ param Num Valor a sumar.
+* \ return void 
+*/ 
+void LSR(unsigned long Rd , unsigned long Rn , int Num);
+/** biref Funcion desplazamiento hacia la Derecha con dos registros.
+* \ param Rd Resultado de la operacion.
+* \ param Rn Valor del registro a sumar.
+* \ return void.
+*/
+void LSDS(unsigned long Rd, unsigned long Rn);
+/** brief Funcion para rotar.
+* \ param Rdn Resultado de la operacion.
+* \ param Rm Numero a rotar.
+* \ return void 
+*/
+void ROR(unsigned long Rdn, unsigned long Rm);
+/** brief Funcion para desplazar aritmeticamente hacia la derecha con un registro y y un numero.
+* \ param Rd Resultado de la operacion.
+* \ param Rm Valor del registro a sumar.
+* \ param Num Valor a sumar.
+* \ return void.
+*/
+void ASR(unsigned long Rd, unsigned long Rm, int Num);
+/** brief Funcion para despalazar aritmeticamente hacia la derecha con dos registros.
+* \ param Rd Resultado de la operacion.
+* \ param Rm numero a trasladar.
+* \ return void.
+*/ 
+void ASRS(unsigned long Rd, unsigned long Rm);
+/** brief Funcion que hace una and de 1 bit y con Rm negado.
+* \ param Rd Resultado de la operacion 
+* \ param Rm Registro a negar.
+* \ return void.
+*/ 
+void BICS(unsigned lon Rd, unsigned long Rm);
+
