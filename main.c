@@ -15,61 +15,61 @@ int main(void)
 	{
 		case 1:
 			printf("ingrese el numero del registro en el que desea guardar");
-			scanf("%d",j);
+			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
-			scanf("%d",k);
+			scanf("%d",&k);
 			printf("ingrese el numero con el que desea operar");
-			scanf("%d",num);
-        		c=ADD(registro(j),registro(k),num);   /*"llame la fución"*/
-        		registro(j)=c;                            
+			scanf("%d",&num);
+        		c=ADD(registro[j],registro[k],num);   /*"llame la fución"*/
+        		registro[j]=c;                            
 		break;
 		case 2:
         		printf("ingrese el numero del registro en el que desea guardar");
-			scanf("%d",j);
+			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
-			scanf("%d",k);
-        		c=ADDS(registro(j),registro(k));  /* "llame la fución"*/
-        		registro(j)=c;                            
+			scanf("%d",&k);
+        		c=ADDS(registro[j],registro[k]);  /* "llame la fución"*/
+        		registro[j]=c;                            
 		break;
 		case 3:
 			printf("ingrese el numero del registro en el que desea guardar");
-			scanf("%d",j);
+			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
-			scanf("%d",k);
-        		c=ORR(registro(j),registro(k));   /*"llame la fución"*/
-        		registro(j)=c;                            
+			scanf("%d",&k);
+        		c=ORR(registro[j],registro[k]);   /*"llame la fución"*/
+        		registro[j]=c;                            
 		break;
 		case 4: 
         		printf("ingrese el numero del registro en el que desea guardar");
-			scanf("%d",j);
+			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
-			scanf("%d",k);
-        		c=EOR(registro(j),registro(k));   /*"llame la fución"*/
-        		registro(j)=c;                            
+			scanf("%d",&k);
+        		c=EOR(registro[j],registro[k]);   /*"llame la fución"*/
+        		registro[j]=c;                            
 		break;
 		case 5:
         		printf("ingrese el numero del registro en el que desea guardar");
-			scanf("%d",j);
+			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
-			scanf("%d",k);
-        		c=MOV(registro(j),registro(k));   /*"llame la fución"*/
-        		registro(j)=c;                            
+			scanf("%d",&k);
+        		c=MOV(registro[j],registro[k]);   /*"llame la fución"*/
+        		registro[j]=c;                            
 		break;
 		case 6:
 			printf("ingrese el numero del registro en el que desea guardar");
-			scanf("%d",j);
+			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
-			scanf("%d",k);
-			c=AND(registro(j),registro(k));   /* "llame la fución"*/
-			 registro(j)=c;                            
+			scanf("%d",&k);
+			c=AND(registro[j],registro[k]);   /* "llame la fución"*/
+			 registro[j]=c;                            
         	break;
 		case 7:
 			printf("ingrese el numero del registro en el que desea guardar");
-			scanf("%d",j);
+			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
-			scanf("%d",k);
-			c=SUB(registro(j),registro(k));   "llame la fución"
-        		registro(j)=c;                            
+			scanf("%d",&k);
+			c=SUB(registro[j],registro[k]);   "llame la fución"
+        		registro[j]=c;                            
 			printf("el resultado es:"%d",c");
         	break;
 	}
