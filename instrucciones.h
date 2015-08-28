@@ -57,6 +57,7 @@ void SUB (unsigned long *Rd,unsigned long Rn, unsigned long Rm);
 * \ param Rd Resultado de la operacion.
 * \ param Rn Primer valor de operacion.
 * \ param Rm Segundo valor de operacion.
+* \ return void
 */
 void Bandera (unsigned long *Rd,unsigned long Rn, unsigned long Rm);
 /** brief Funcion desplazamiento hacia la izquierda ingresando un numero a sumar.
@@ -110,16 +111,47 @@ void ASRS(unsigned long *Rd, unsigned long Rn);
 * \ return void.
 */ 
 void BICS(unsigned long *Rd, unsigned long Rn);
-
-void CMN(unsigned long *Rd, unsigned long Rn);
-void CMP(unsigned long *Rd, unsigned long Rn);
-void MUL(unsigned long *Rd, unsigned long Rn);
-void MVN(unsigned long *Rd, unsigned long Rn);
+/** brief Funcion que modifica las banderas sin guardar el resultado 
+* \ param Rn Primer registro a operar.
+* \ param Rm Segundo registro a operar.
+* \ return void.
+*/
+void CMN(unsigned long Rn, unsigned long Rm);
+/** biref Funcion que modifica las banderas comparando los registros.
+* \ param Rn Primer registro a comparar.
+* \ param Rm Segundo regsitro a comparar.
+* \ return void.
+*/
+void CMP(unsigned long Rn, unsigned long Rm);
+/** brief Funcion que modifica banderas comparando un registro y un numero.
+* \ param Rn Registro a comparar.
+* \ param Num Numero para comparar con el registro.
+* \ return void.
+*/
+void CMPS(unsigned long Rn,unsigned long Num);
+/** brief Funcion Multiplica dos registros, sin signo y almacena los 32 bits menos significativos del resultado en el regsitro de destino.
+* \ param Rd Registro para el resultado de la operacion.
+* \ param Rn Primer valor del reistro a multiplicar.
+* \ param Rm Segundo valor del registro a multiplicar.
+* \ return void.
+*/
+void MUL(unsigned long *Rd, unsigned long Rn, unsigned long Rm);
+/** brief funcion para hacer el complemento a dos de un registro.
+* \ param Rd Resultado de la operacion.
+* \ retrn void.
+*/ 
+void MVN(unsigned long *Rd);
+/** brief Funcion que hace un retardo.
+* \return void.
+*/
 void NOP(unsigned long *Rd, unsigned long Rn);
+/** brief Funcion para cambiar el orden de los bits
+* \ param Rb Registro a modificar.
+* \ return void.
+*/
 void REV(unsigned long *Rd, unsigned long Rn);
 void REV16(unsigned long *Rd, unsigned long Rn);
 void REVSH(unsigned long *Rd, unsigned long Rn);
-void RSB(unsigned long *Rd, unsigned long Rn);
 void RSB(unsigned long *Rd, unsigned long Rn);
 void SBC(unsigned long *Rd, unsigned long Rn);
 void TST (unsigned long *Rd, unsigned long Rn);
