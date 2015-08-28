@@ -111,3 +111,17 @@ void ASRS(unsigned long *Rd, unsigned long Rn);
 */ 
 void BICS(unsigned long *Rd, unsigned long Rn);
 
+void CMN(unsigned long *Rd, unsigned long Rn);
+void CMP(unsigned long *Rd, unsigned long Rn);
+void MUL(unsigned long *Rd, unsigned long Rn);
+void MVN(unsigned long *Rd, unsigned long Rn);
+void NOP(unsigned long *Rd, unsigned long Rn);
+void REV(unsigned long *Rd, unsigned long Rn);
+void REV16(unsigned long *Rd, unsigned long Rn);
+void REVSH(unsigned long *Rd, unsigned long Rn);
+void RSB(unsigned long *Rd, unsigned long Rn);
+void RSB(unsigned long *Rd, unsigned long Rn);
+void SBC(unsigned long *Rd, unsigned long Rn);
+void TST (unsigned long *Rd, unsigned long Rn);
+
+
