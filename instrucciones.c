@@ -1,40 +1,41 @@
 #include "instrucciones.h"
-int ADD(int Rd, int Rn, int Num)
+void ADD(unsigned long *Rd, unsigned long Rn, unsigned long Num)
 {
 	Rd=Rn+Num;
-	return Rd;
+	return;
 }
-int ADDS(int Rd,int Rn,int Rm)
+void ADDS(unsigned long *Rd, unsigned long Rn,unsigned long Rm)
 {
 	Rd=Rn+Rm;
-	return Rd;
+	return;
 }
-int ORR (int Rd,int Rn, int Rm)
+void ORR (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 {
 	Rd=Rn | Rm;
-	return Rd;
+	return;
 }
-int EOR (int Rd,int Rn, int Rm)
+void EOR (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 {
 	Rd=Rn ^ Rm;
-	return R1;
+	return;
 }
-int MOV (int Rd,int Rn)
+void MOV (unsigned long *Rd,unsigned long Rn)
 {
 	Rd=Rn;
-	return Rd;
+	return;
 }
-int AND (int Rd,int Rn, int Rm)
+void AND (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 {
 	Rd=Rn & Rm;
-	return Rd;
+	return;
 }
-int SUB (int Rd,int Rn, int Rm)
+void SUB (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 {
 	Rd=Rn-Rm;
-	return Rd;
+	return;
 }
-int Bandera (int Rd, int Rn, int Rm)
+void Bandera (unsigned long Rd, unsigned long Rn, unsigned long Rm)
+unsigned long *N, *Z, *C, *V;
 {
 if (Rd>127)
 {
@@ -70,4 +71,5 @@ else
 		V=0;
 	}		
 }
+return;
 }
