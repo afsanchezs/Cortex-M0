@@ -35,7 +35,7 @@ void SUB (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 	return;
 }
 void Bandera (unsigned long Rd, unsigned long Rn, unsigned long Rm)
-unsigned long *N, *Z, *C, *V;
+unsigned long = *N, *Z, *C, *V;
 {
 if (Rd>127)
 {
