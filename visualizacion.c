@@ -1,10 +1,10 @@
 #include "visualizacion.h"
-int contador;
-int visualizacion_registro(registro[]) 
+void visualizacion_registro(unsigned long *R) 
 {
-	for (contador=0;contador<=11;contador++)
+	int i;
+	for (i=0;i<=11;i++)
 		{
-			printf("Registro[%d]=%d\n",contador,registro[contador]);
+			printf("Registro[%d]=%d\t",i,R[i]);
 		}
-	return 0;
+	return;
 }
