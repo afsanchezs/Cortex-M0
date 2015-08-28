@@ -1,6 +1,6 @@
 /**
 *\ brief Funcion para visualizar los registros
-*\ param registro[] Registros del mircroprocesador
-*\ return Listado de Registros
+*\ param *R Puntero que señala la posicion de los registros almacenados.
+*\ return void 
 */
-int visualizacion_registro(registro[]);
+void visualizacion_registro(unsigned long *R);
