@@ -1,4 +1,5 @@
 #include "instrucciones.h"
+int i; //Contador
 void ADD(unsigned long *Rd, unsigned long Rn, unsigned long Num)
 {
 	Rd=Rn+Num;
@@ -70,6 +71,10 @@ else
 	{
 		V=0;
 	}		
+}
+void LSL(unsigned long *Rd, unsigned long Rn, unsigned long Num)
+{
+	Rd=Rn<<Num;
 }
 return;
 }
