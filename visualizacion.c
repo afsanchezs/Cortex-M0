@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "visualizacion.h"
 void visualizacion_registro(unsigned long *R) 
 {
