@@ -136,7 +136,7 @@ void CMPS(unsigned long Rn,unsigned long Num);
 * \ return void.
 */
 void MUL(unsigned long *Rd, unsigned long Rn, unsigned long Rm);
-/** brief funcion para hacer el complemento a dos de un registro.
+/** brief funcion para hacer el complemento a un registro.
 * \ param Rd Resultado de la operacion.
 * \ retrn void.
 */ 
@@ -150,10 +150,31 @@ void NOP(unsigned long *Rd, unsigned long Rn);
 * \ return void.
 */
 void REV(unsigned long *Rd, unsigned long Rn);
+/** brief Funcion para modificar la posicion de grupos de 16 bits.
+* \ param Rd Registro resultante.
+* \ param Rn Registro a modificar.
+* \ return void.
+*/
 void REV16(unsigned long *Rd, unsigned long Rn);
+
 void REVSH(unsigned long *Rd, unsigned long Rn);
-void RSB(unsigned long *Rd, unsigned long Rn);
-void SBC(unsigned long *Rd, unsigned long Rn);
+/** brief Funcion para obtener el complemento a dos de un numero
+* \ param Rb Registro al cual se le hara el complemento.
+* \ return void. 
+*/
+void RSB(unsigned long *Rd);
+/** brief Funcion para restar con Carry
+* \ param Rd Registro para el resultado de la operacion.
+* \ param Rn Primer valor a operar
+* \ param Rm Segundo valor a operar
+* \ return void.
+*/ 
+void SBC(unsigned long *Rd, unsigned long Rn, unsigned long Rm);
+/** brief Funcion que hace una AND bit a bit, pero solo modifica las banderas.
+* \ parm Rn Primer valor ingresado para hacer la operacion.
+* \ pram Rm Segundo valor ingresado para hacer la operacion.
+* \ return void.
+*/
 void TST (unsigned long *Rd, unsigned long Rn);
 
 
