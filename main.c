@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "visualizacion.h"
+#include "instrucciones.h"
 /**
 *\ Arreglo registro[] Datos recibidos del microcontrolador.
 *\ Variable i Contador.
