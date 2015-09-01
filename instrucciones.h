@@ -156,7 +156,10 @@ void REV(unsigned long *Rd, unsigned long Rn);
 * \ return void.
 */
 void REV16(unsigned long *Rd, unsigned long Rn);
-
+/** Funcion para modificar la posicion de a ocho bits
+* \ param Rd Numero a modificar.
+* \ return void
+*/ 
 void REVSH(unsigned long *Rd, unsigned long Rn);
 /** brief Funcion para obtener el complemento a dos de un numero
 * \ param Rb Registro al cual se le hara el complemento.
