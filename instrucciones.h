@@ -21,7 +21,7 @@ void ADDS(unsigned long *Rd,unsigned long Rn, unsigned long Rm);
 * \param Rm Segundo registro de ingreso para ORR.
 * \return void 
 */
-void ORR (unsigned long *Rd,unsigned long Rn, unsigned long Rm;
+void ORR (unsigned long *Rd,unsigned long Rn, unsigned long Rm);
 /**
 * \brief Funcion para realizar EOR  con dos registros
 * \param Rd Registro para el resultado.
