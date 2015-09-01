@@ -46,12 +46,12 @@ void MOV (unsigned long *Rd,unsigned long Rn);
 */
 void AND (unsigned long *Rd,unsigned long Rn, unsigned long Rm);
 /**
- * \brief Funcion para realizar la resta entre un registro y un valor
- * \param Rd Registro para el resultado
- * \param Rn Primer registro de ingreso a sumar
- * \param Rm Segundo registro de ingreso a sumar
- * \return void
- */
+* \brief Funcion para realizar la resta entre un registro y un valor
+* \param Rd Registro para el resultado
+* \param Rn Primer registro de ingreso a sumar
+* \param Rm Segundo registro de ingreso a sumar
+* \return void
+*/
 void SUB (unsigned long *Rd,unsigned long Rn, unsigned long Rm);
 /** brief Funcion generadoras de banderas.
 * \ param Rd Resultado de la operacion.
