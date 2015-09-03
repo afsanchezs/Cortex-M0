@@ -2,40 +2,40 @@
 int i; //Contador
 void ADD(unsigned long *Rd, unsigned long Rn, unsigned long Num)
 {
-	Rd=Rn+Num;
+	*Rd=Rn+Num;
 	return;
 }
 void ADDS(unsigned long *Rd, unsigned long Rn,unsigned long Rm)
 {
-	Rd=Rn+Rm;
+	*Rd=Rn+Rm;
 	return;
 }
 void ORR (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 {
-	Rd=Rn | Rm;
+	*Rd=Rn | Rm;
 	return;
 }
 void EOR (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 {
-	Rd=Rn ^ Rm;
+	*Rd=Rn ^ Rm;
 	return;
 }
 void MOV (unsigned long *Rd,unsigned long Rn)
 {
-	Rd=Rn;
+	*Rd=Rn;
 	return;
 }
 void AND (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 {
-	Rd=Rn & Rm;
+	*Rd=Rn & Rm;
 	return;
 }
 void SUB (unsigned long *Rd,unsigned long Rn, unsigned long Rm)
 {
-	Rd=Rn-Rm;
+	*Rd=Rn-Rm;
 	return;
 }
-void Bandera (unsigned long Rd, unsigned long Rn, unsigned long Rm)
+/*void Bandera (unsigned long Rd, unsigned long Rn, unsigned long Rm)
 unsigned long = *N, *Z, *C, *V;
 {
 if (Rd>127)
@@ -71,10 +71,9 @@ else
 	{
 		V=0;
 	}		
-}
+}*/
 void LSL(unsigned long *Rd, unsigned long Rn, unsigned long Num)
 {
 	Rd=Rn<<Num;
-}
-return;
+	return;
 }
