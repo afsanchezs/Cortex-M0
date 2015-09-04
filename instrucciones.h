@@ -85,7 +85,7 @@ void LSLS(unsigned long *Rd, unsigned long Rn);
 */
 void LSR(unsigned long *Rd , unsigned long Rn ,unsigned long Num);
 /** 
-* \biref Funcion desplazamiento hacia la Derecha con dos registros.
+* \brief Funcion desplazamiento hacia la Derecha con dos registros.
 * \param Rd Resultado de la operacion.
 * \param Rn Valor del registro a sumar.
 * \return void.
@@ -128,7 +128,7 @@ void BICS(unsigned long *Rd, unsigned long Rn);
 */
 void CMN(unsigned long Rn, unsigned long Rm);
 /** 
-* \biref Funcion que modifica las banderas comparando los registros.
+* \brief Funcion que modifica las banderas comparando los registros.
 * \param Rn Primer registro a comparar.
 * \param Rm Segundo regsitro a comparar.
 * \return void.
@@ -200,5 +200,3 @@ void SBC(unsigned long *Rd, unsigned long Rn, unsigned long Rm);
 * \return void.
 */
 void TST (unsigned long *Rd, unsigned long Rn);
-
-
