@@ -1,10 +1,7 @@
+/*
 #include <stdio.h>
 #include "visualizacion.h"
 #include "instrucciones.h"
-/**
-*\ Arreglo registro[] Datos recibidos del microcontrolador.
-*\ Variable i Contador.
-*/
 int main()
 {
 	int registro[]={0,1,2,3,4,5,6,7,8,9,10,11},*R, i, N, Z, C, V, *Bn, *Bz, *Bc, *Bv;
@@ -20,7 +17,7 @@ int main()
 			scanf("%d",&k);
 			printf("ingrese el numero con el que desea operar");
 			scanf("%d",&num);
-        		c=ADD(registro[j],registro[k],num);   /*"llame la fución"*/
+        		c=ADD(registro[j],registro[k],num); 
         		registro[j]=c;                            
 		break;
 		case 2:
@@ -28,7 +25,7 @@ int main()
 			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
 			scanf("%d",&k);
-        		c=ADDS(registro[j],registro[k]);  /* "llame la fución"*/
+        		c=ADDS(registro[j],registro[k]); 
         		registro[j]=c;                            
 		break;
 		case 3:
@@ -36,7 +33,7 @@ int main()
 			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
 			scanf("%d",&k);
-        		c=ORR(registro[j],registro[k]);   /*"llame la fución"*/
+        		c=ORR(registro[j],registro[k]); 
         		registro[j]=c;                            
 		break;
 		case 4: 
@@ -44,7 +41,7 @@ int main()
 			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
 			scanf("%d",&k);
-        		c=EOR(registro[j],registro[k]);   /*"llame la fución"*/
+        		c=EOR(registro[j],registro[k]); 
         		registro[j]=c;                            
 		break;
 		case 5:
@@ -52,7 +49,7 @@ int main()
 			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
 			scanf("%d",&k);
-        		c=MOV(registro[j],registro[k]);   /*"llame la fución"*/
+        		c=MOV(registro[j],registro[k]);   
         		registro[j]=c;                            
 		break;
 		case 6:
@@ -60,7 +57,7 @@ int main()
 			scanf("%d",&j);
 			printf("ingrese el numero del registro con el que desea operar");
 			scanf("%d",&k);
-			c=AND(registro[j],registro[k]);   /* "llame la fución"*/
+			c=AND(registro[j],registro[k]);  
 			 registro[j]=c;                            
         	break;
 		case 7:
@@ -75,3 +72,4 @@ int main()
 	}
 	return 0;
 }
+*/
