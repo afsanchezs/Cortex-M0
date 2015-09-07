@@ -90,7 +90,7 @@ void LSR(unsigned long *Rd , unsigned long Rn ,unsigned long Num);
 * \param Rn Valor del registro a sumar.
 * \return void.
 */
-void LSDS(unsigned long *Rd, unsigned long Rn);
+void LSRS(unsigned long *Rd, unsigned long Rn);
 /** 
 * \brief Funcion para rotar.
 * \param Rdn Resultado de la operacion.
