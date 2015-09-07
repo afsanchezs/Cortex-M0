@@ -74,6 +74,21 @@ else
 }*/
 void LSL(unsigned long *Rd, unsigned long Rn, unsigned long Num)
 {
-	Rd=Rn<<Num;
+	*Rd=Rn<<Num;
+	return;
+}
+void LSLS(unsigned long *Rd, unsigned long Rn)
+{
+	*Rd=Rn<<1;
+	return;
+}
+void LSR(unsigned long *Rd, unsigned long Rn, unsigned long Num)
+{
+	*Rd=Rn>>Num;
+	return;
+}
+void LSRS(unsigned long *Rd, unsigned long Rn)
+{
+	*Rd=Rn>>1;
 	return;
 }
