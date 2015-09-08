@@ -6,18 +6,18 @@ void ADD(unsigned long *Rd, unsigned long *Rn, unsigned long Num)
 		     // un numero.
 	return;
 }
-void ADDS(unsigned long *Rd, unsigned long *Rn,unsigned long Rm)
+void ADDS(unsigned long *Rd, unsigned long *Rn,unsigned long *Rm)
 {
 	*Rd=*Rn+Rm;	// Esta operación representa la suma entre dos registros.
 	return;
 }
-void ORR (unsigned long *Rd,unsigned long *Rn, unsigned long Rm)
+void ORR (unsigned long *Rd,unsigned long *Rn, unsigned long *Rm)
 {
 	*Rd=*Rn | *Rm;  //El caracter "|", es el encargado de realizar la operacion 
 		      //de la compuerta lógica OR, la operación es realizada entre dos registros.
 	return;
 }
-void EOR (unsigned long *Rd,unsigned long *Rn, unsigned long Rm)
+void EOR (unsigned long *Rd,unsigned long *Rn, unsigned long *Rm)
 {
 	*Rd=*Rn ^ *Rm;	// El caracter "^" es el encargado de realizar la operación
 	return;		// de la compuerta lógica de XOR, la operacion es realizada entre dos registros.
