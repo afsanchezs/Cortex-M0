@@ -94,45 +94,45 @@ void LSRS(unsigned long *Rd, unsigned long *Rn)
 	*Rd=*Rd>>*Rn;
 	return;
 }
-void ROR(unsigned long *Rm,unsigned long *Rn)
+void ROR(unsigned long *Rd,unsigned long *Rn)
 {
-	*Rm=*Rm>>32;
+	*Rd=*Rd>>32;
    	*Rn=*Rn<<32;
-   	*Rm=*Rm||*Rn;
+   	*Rd=*Rd||*Rn;
 	return;
 }
-void ASRS(unsigned long *Rm,unsigned long *Rn)
+void ASRS(unsigned long *Rd,unsigned long *Rn)
 {
    	*Rn=~0<<(32-*Rn);
-   	*Rm=(*Rm>>1)|*Rn;
+   	*Rd=(*Rd>>1)|*Rn;
 	return;
 }
-void REV(unsigned long *Rm,unsigned long *Rn)
+void REV(unsigned long *Rd,unsigned long *Rn)
 {
-    	*Rn=*Rm<<24;
-    	*Rn=*Rn|*Rm>>24;
-    	*Rm=*Rn|((((*Rm<<8)>>24)<<8)|(((*Rm<<16)>>24)<<16));
+    	*Rn=*Rd<<24;
+    	*Rn=*Rn|*Rd>>24;
+    	*Rd=*Rn|((((*Rd<<8)>>24)<<8)|(((*Rd<<16)>>24)<<16));
 	return;
 }
-void REV16(unsigned long *Rm,unsigned long *Rn)
+void REV16(unsigned long *Rd,unsigned long *Rn)
 {
-	*Rn=((*Rm<<24)>>16)|((*Rm<<16)>>24);
-    	*Rm=*Rn|(((*Rm>>24)<<16)|((*Rm>>16)<<24));
+	*Rn=((*Rd<<24)>>16)|((*Rd<<16)>>24);
+    	*Rd=*Rn|(((*Rd>>24)<<16)|((*Rd>>16)<<24));
 	return;
 }
-void BIC(unsigned long *Rm,unsigned long *Rn)
+void BIC(unsigned long *Rd,unsigned long *Rn)
 {
-	*Rm&=~*Rn;
+	*Rd&=~*Rn;
 	return;
 }
-void MVN(unsigned long *Rm,unsigned long *Rn)
+void MVN(unsigned long *Rd,unsigned long *Rn)
 {
-	*Rm=~*Rn;
+	*Rd=~*Rn;
 	return;
 }
-void RSBS(unsigned long *Rm,unsigned long *Rn)
+void RSBS(unsigned long *Rd,unsigned long *Rn)
 {
-	*Rm=(~*Rn)+1;
+	*Rd=(~*Rn)+1;
 }
 void NOP(void)
 {
