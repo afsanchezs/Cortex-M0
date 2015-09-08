@@ -159,7 +159,7 @@ void MVN(unsigned long *Rd);
 * \brief Funcion que hace un retardo.
 * \return void.
 */
-void NOP(unsigned long *Rd, unsigned long *Rn);
+void NOP(void);
 /** 
 * \brief Funcion para cambiar el orden de los bits
 * \param Rb Registro a modificar.
