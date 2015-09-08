@@ -8,7 +8,7 @@ void ADD(unsigned long *Rd, unsigned long *Rn, unsigned long Num)
 }
 void ADDS(unsigned long *Rd, unsigned long *Rn,unsigned long *Rm)
 {
-	*Rd=*Rn+Rm;	// Esta operación representa la suma entre dos registros.
+	*Rd=*Rn+*Rm;	// Esta operación representa la suma entre dos registros.
 	return;
 }
 void ORR (unsigned long *Rd,unsigned long *Rn, unsigned long *Rm)
