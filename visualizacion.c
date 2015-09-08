@@ -11,13 +11,17 @@ void visualizacion_registro(unsigned long *R)
 	noecho();		/* No imprimir los caracteres leidos */
 	start_color();	/* Permite manejar colores */
 	init_pair(1, COLOR_GREEN, COLOR_BLACK);	/* Pair 1 -> Texto verde fondo Negro */	
-	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	attron(COLOR_PAIR(1));	/* Activa el color verde para el texto y negro para el fondo Pair 1*/
-	//move(2, 34);	/* Mueve el cursor a la posición y=2, x=34*/
+	move(2, 3);	/* Mueve el cursor a la posición y=2, x=34*/
 	for (i=0;i<=11;i++)
 		{
-			printw("Registro[%lu]=%lu\t",i,R[i]);  // Linea del codigo que muestra el registro ingresado// 
+			if((i==4)|(i==8))
+			{
+				printw("\n");
+			}
+			printw("	Registro[%lu]=%lu\t",i,R[i]);  // Linea del codigo que muestra el registro ingresado// 
 		}
+	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	refresh();	/* Imprime en la pantalla*/
 	attroff(COLOR_PAIR(1));	/* DEshabilita los colores Pair 1 */
 	getch();	/* Espera entrada del usuario */
