@@ -154,7 +154,7 @@ void MUL(unsigned long *Rd, unsigned long Rn, unsigned long Rm);
 * \param Rd Resultado de la operacion.
 * \retrn void.
 */ 
-void MVN(unsigned long *Rd);
+void MVN(unsigned long *Rd,unsigned long *Rn);
 /** 
 * \brief Funcion que hace un retardo.
 * \return void.
