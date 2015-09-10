@@ -15,7 +15,7 @@ void visualizacion_registro(unsigned long *R)
 	move(2, 3);	/* Mueve el cursor a la posición y=2, x=34*/
 	for (i=0;i<=11;i++)
 		{
-			if((i==4)|(i==8))
+			if((i==3)|(i==6)|(i==9))
 			{
 				printw("\n");
 			}
