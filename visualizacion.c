@@ -13,6 +13,7 @@ void visualizacion_registro(unsigned long *R)
 	init_pair(1, COLOR_GREEN, COLOR_BLACK);	/* Pair 1 -> Texto verde fondo Negro */	
 	attron(COLOR_PAIR(1));	/* Activa el color verde para el texto y negro para el fondo Pair 1*/
 	move(2, 3);	/* Mueve el cursor a la posición y=2, x=34*/
+	printw("\t\t\t\t   Registros\n\n");
 	for (i=0;i<=11;i++)
 		{
 			if((i==3)|(i==6)|(i==9))
@@ -21,6 +22,8 @@ void visualizacion_registro(unsigned long *R)
 			}
 			printw("	Registro[%lu]=%lu\t",i,R[i]);  // Linea del codigo que muestra el registro ingresado// 
 		}
+	printw("\n\n\t\t\t\t   Banderas\n\n");
+	printw("\tN=%lu\t\t    Z=%lu\t\t     C=%lu\t\t    V=%lu",N,Z,C,V);
 	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	refresh();	/* Imprime en la pantalla*/
 	attroff(COLOR_PAIR(1));	/* DEshabilita los colores Pair 1 */
