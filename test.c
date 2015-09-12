@@ -9,69 +9,75 @@
   scanf("%lu",&Op);
   switch (Op)
   {
-  case 1:
+	 case 1:
 	        	printf("ingrese el numero del registro en el que desea guardar");
 	 	        scanf("%lu",&Rd);
 	        	printf("ingrese el numero del registro con el que desea operar");
-       		  scanf("%lu",&Rn);
-            printf("ingrese el numero con el que desea operar");
-		    	  scanf("%lu",&Num);
-          	ADD(Rd,Rn,Num);
-  break;
-  case 2:
+       		  	scanf("%lu",&Rn);
+            		printf("ingrese el numero con el que desea operar");
+		    	scanf("%lu",&Num);
+          		ADD(Rd,Rn,Num);
+  	break;
+  	
+  	case 2:
         		printf("ingrese el numero del registro en el que desea guardar");
       			scanf("%lu",&Rd);
-			      printf("ingrese el numero del registro con el que desea operar");
+			printf("ingrese el numero del registro con el que desea operar");
 		      	scanf("%lu",&Rn);
-			      printf("ingrese el numero del registro con el que desea operar");
-			      scanf("%lu",&Rm);
+			printf("ingrese el numero del registro con el que desea operar");
+			scanf("%lu",&Rm);
         		ADDS(Rd,Rn,Rm);                             
-		break;
-		case 3:
-			      printf("ingrese el numero del registro en el que desea guardar");
-			      scanf("%lu",&Rd);
-			      printf("ingrese el numero del registro con el que desea operar");
-			      scanf("%lu",&Rn);
-			      printf("ingrese el numero del registro con el que desea operar");
-			      scanf("%lu",&Rm);
-        		ORR(Rd,Rn,Rm); 
+	 break;
+	 
+	case 3:
+			printf("ingrese el numero del registro en el que desea guardar");
+			scanf("%lu",&Rd);
+			printf("ingrese el numero del registro con el que desea operar");
+			scanf("%lu",&Rn);
+			printf("ingrese el numero del registro con el que desea operar");
+			scanf("%lu",&Rm);
+        	        ORR(Rd,Rn,Rm); 
                            
-		break;
-		case 4: 
+	break;
+	
+	case 4: 
         		printf("ingrese el numero del registro en el que desea guardar");
-			      scanf("%lu",&Rd);
+			scanf("%lu",&Rd);
 		      	printf("ingrese el numero del registro con el que desea operar");
-			      scanf("%lu",&Rn);
-			      printf("ingrese el numero del registro con el que desea operar");
-			      scanf("%lu",&Rm);
+			scanf("%lu",&Rn);
+			printf("ingrese el numero del registro con el que desea operar");
+			scanf("%lu",&Rm);
         		EOR(Rd,Rn,Rm);                             
-		break;
-		case 5:
+	break;
+	
+	case 5:
         		printf("ingrese el numero del registro en el que desea guardar");
-			      scanf("%lu",&Rd);
-			      printf("ingrese el numero del registro con el que desea operar");
-			      scanf("%lu",&Rn);
-        	  MOV(Rd,Rn);                              
-		break;
-		case 6:
-			      printf("ingrese el numero del registro en el que desea guardar");
-			      scanf("%lu",&Rd);
-			      printf("ingrese el numero del registro con el que desea operar");
+			scanf("%lu",&Rd);
+			printf("ingrese el numero del registro con el que desea operar");
+			scanf("%lu",&Rn);
+        	  	MOV(Rd,Rn);                              
+	break;
+	
+	case 6:
+			printf("ingrese el numero del registro en el que desea guardar");
+			scanf("%lu",&Rd);
+			printf("ingrese el numero del registro con el que desea operar");
 		        scanf("%lu",&Rn);
-			      printf("ingrese el numero del registro con el que desea operar");
-			      scanf("%lu",&Rm);
-			      AND(Rd,Rn,Rm);  
+			printf("ingrese el numero del registro con el que desea operar");
+			scanf("%lu",&Rm);
+			AND(Rd,Rn,Rm);  
 			                            
-    break;
-		case 7:
-			      printf("ingrese el numero del registro en el que desea guardar");
-			      scanf("%lu",&Rd);
-			      printf("ingrese el numero del registro con el que desea operar");
+    	break;
+    	
+	case 7:
+			printf("ingrese el numero del registro en el que desea guardar");
+			scanf("%lu",&Rd);
+			printf("ingrese el numero del registro con el que desea operar");
 		        scanf("%lu",&Rn);
-			      printf("ingrese el numero del registro con el que desea operar");
-			      scanf("%lu",&Rm);
-			      SUB(Rd,Rn,Rm); 
-    break;
-	}
+			printf("ingrese el numero del registro con el que desea operar");
+			scanf("%lu",&Rm);
+			SUB(Rd,Rn,Rm); 
+	 break;
+  }
 	return 0;
 }
