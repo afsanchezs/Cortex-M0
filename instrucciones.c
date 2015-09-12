@@ -76,22 +76,22 @@ void Bandera (unsigned long *Rd, unsigned long *Rn, unsigned long *Rm, unsigned 
 }
 void LSL(unsigned long *Rd, unsigned long *Rn, unsigned long Num)
 {
-	*Rd=*Rn<<Num; 		 
+	*Rd=*Rn<<Num; 	// La operacion representada con los caracteres "<<" implican un movimineto hacia la izquierda un Numero determinado de veces 
 	return;			
 }
 void LSLS(unsigned long *Rd, unsigned long *Rn)
 {
-	*Rd=*Rd<<*Rn;
+	*Rd=*Rd<<*Rn;   // La operacion representada con los caracteres "<<" implican un movimiento hacia la izquierda dependiendo del valor del registro de ingreso.
 	return;
 }
 void LSR(unsigned long *Rd, unsigned long *Rn, unsigned long Num)
 {
-	*Rd=*Rn>>Num;		
+	*Rd=*Rn>>Num;	// La operacion representada con los caracteres ">>" implican un movimineto hacia la derecha un Numero determinado de veces. 
 	return;			
 }
 void LSRS(unsigned long *Rd, unsigned long *Rn)
 {
-	*Rd=*Rd>>*Rn;
+	*Rd=*Rd>>*Rn;	// La operacion representada con los caracteres ">>" implican un movimineto hacia la derecha dependiendo del valor del registro ingresado. 
 	return;
 }
 void ROR(unsigned long *Rd,unsigned long *Rn)
@@ -122,18 +122,18 @@ void REV16(unsigned long *Rd,unsigned long *Rn)
 }
 void BIC(unsigned long *Rd,unsigned long *Rn)
 {
-	*Rd&=~*Rn;
+	*Rd&=~*Rn; 	// El simbolo "~" realiza el complemento de un registro, por lo tanto esta funcion realiza una operacion AND entre un registro y el complemento del registro de ingreso.
 	return;
 }
 void MVN(unsigned long *Rd,unsigned long *Rn)
 {
-	*Rd=~*Rn;
+	*Rd=~*Rn;	// el simbolo "~" realiza el complemento de un registro, por lo tanto esta funcion guarda el complemento de un registro.
 	return;
 }
 void RSBS(unsigned long *Rd,unsigned long *Rn)
 {
-	*Rd=(~*Rn)+1;
+	*Rd=(~*Rn)+1;   // Guarda el complemento a dos de un registro ya ingresado.
 }
 void NOP(void)
-{
+{			// No realiza ninguna operacion durante un ciclo de reloj.
 }
