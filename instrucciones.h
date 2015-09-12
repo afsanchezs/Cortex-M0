@@ -60,7 +60,7 @@ void SUB (unsigned long *Rd,unsigned long *Rn, unsigned long *Rm);
 * \param Rm Segundo valor de operacion.
 * \return void
 */
-void Bandera (unsigned long *Rd,unsigned long *Rn, unsigned long *Rm);
+void Bandera (unsigned long *Rd, unsigned long *Rn, unsigned long *Rm, unsigned long *N, unsigned long *Z, unsigned long *C, unsigned long *V);
 /** 
 * \brief Funcion desplazamiento hacia la izquierda ingresando un numero a sumar.
 * \param Rd Resultado de la operacion.
