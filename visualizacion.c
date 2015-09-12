@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ncurses.h>
 #include "visualizacion.h"
-void visualizacion_registro(unsigned long *R) 
+void visualizacion_registro(unsigned long *R, unsigned long *N, unsigned long *Z, unsigned long *C, unsigned long *V)
 {
 	unsigned long i;  // i es equivalente a un contador// 	
 	initscr();		/* Inicia modo curses */
