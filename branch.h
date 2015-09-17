@@ -5,7 +5,7 @@
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BEQ(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BEQ(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que reliza un salto si es diferente
 * \param Banderas Puntero para el registro de las banderas
@@ -13,7 +13,7 @@ void BEQ(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BNE(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BNE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que reliza un salto si es mayor o igual (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -21,7 +21,7 @@ void BNE(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-char BCS(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BCS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcin que reliza un salto si es menor (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -29,7 +29,7 @@ char BCS(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BCC(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BCC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto si es negativo
 * \param Banderas Puntero para el registro de las banderas
@@ -37,7 +37,7 @@ void BCC(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BMI(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BMI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto si es positivo
 * \param Banderas Puntero para el registro de las banderas
@@ -45,7 +45,7 @@ void BMI(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BPL(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BPL(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto si hay sobreflujo
 * \param Banderas Puntero para el registro de las banderas
@@ -53,7 +53,7 @@ void BPL(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BVS(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BVS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto si no hay sobreflujo
 * \param Banderas Puntero para el registro de las banderas
@@ -61,7 +61,7 @@ void BVS(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void.
 */ 
-void BVC(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BVC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto si es mayor (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -69,7 +69,7 @@ void BVC(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BHI(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BHI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto si es menor o igual (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -77,7 +77,7 @@ void BHI(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLS(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BLS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que genera un salto si es mayor o igual (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -85,7 +85,7 @@ void BLS(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BGE(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BGE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto si es menor (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -93,7 +93,7 @@ void BGE(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLT(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BLT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto si es mayor (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -101,7 +101,7 @@ void BLT(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void.
 */ 
-void BGT(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BGT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realizaun un salto si es menor o igual (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -109,7 +109,7 @@ void BGT(char *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLE(char *Banderas,unsigned long *PC,unsigned long Posicion);
+void BLE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 /**
 * \brief Funcion que realiza un salto sin condicion, de cualquier forma
 * \param PC Puntero a el registro PC
