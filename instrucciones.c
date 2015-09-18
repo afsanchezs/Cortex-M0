@@ -37,40 +37,40 @@ void SUB (unsigned long *Rd,unsigned long *Rn, unsigned long *Rm)
 	*Rd=*Rn-*Rm;	// Esta operación es para realizar la resta entre dos regitros 
 	return;
 }
-void Bandera (unsigned long *Rd, unsigned long *Rn, unsigned long *Rm, unsigned long *N, unsigned long *Z, unsigned long *C, unsigned long *V)
+void Bandera (unsigned long *Rd, unsigned long *Rn, unsigned long *Rm, unsigned long *Banderas)
 {
-	if (*Rd>127)
+	if (*Rd>2147483647)
 	{
-		*N=1;
+		*(Banderas+0)=1;
 	}
-	if ((*Rd=128) || (*Rd=256))
+	if ((*Rd=4294967296) || (*Rd=2147483648))
 	{
-		*Z=1;
+		*(Banderas+1)=1;
 	}
-	if (*Rd>255)
+	if (*Rd>4294967295)
 	{
-		*C=1;
+		*(Banderas+2)=1;
 	}
-	if (*Rd>127)
+	if (*Rd>2147483647)
 	{
-		if ((*Rn<127)&&(*Rm<127))
+		if ((*Rn<2147483647)&&(*Rm<2147483647))
 		{
-			*V=1;
+			*(Banderas+3)=1;
 		}
 		else 
 		{
-			*V=0;
+			*(Banderas+3)=0;
 		}
 	}
 	else 
 	{
-		if ((*Rn>127)&&(*Rm>127))
+		if ((*Rn>2147483647)&&(*Rm>2147483647))
 		{
-			*V=1;
+			*(Banderas+3)=1;
 		}
 		else 
 		{
-			*V=0;
+			*(Banderas+3)=0;
 		}		
 	}
 }
