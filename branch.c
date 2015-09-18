@@ -9,7 +9,7 @@ void BEQ(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BNE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -21,7 +21,7 @@ void BNE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BCS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -33,9 +33,9 @@ void BCS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
-char BCC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BCC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
 	if(Banderas[2]==0)
 	{
@@ -45,9 +45,9 @@ char BCC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
-char BMI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BMI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
 	if(Banderas[0]==1)
 	{
@@ -57,7 +57,7 @@ char BMI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BPL(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -69,7 +69,7 @@ void BPL(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BVS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -81,7 +81,7 @@ void BVS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BVC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -93,7 +93,7 @@ void BVC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BHI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -105,7 +105,7 @@ void BHI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BLS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -117,7 +117,7 @@ void BLS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BGE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -129,7 +129,7 @@ void BGE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BLT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -141,7 +141,7 @@ void BLT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BGT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -153,7 +153,7 @@ void BGT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BLE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 {
@@ -165,10 +165,10 @@ void BLE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	{
 		*PC+=1;
 	}
-	return 0;
+	return;
 }
 void BAL(unsigned long *PC,unsigned long Posicion)
 {
 	*PC=Posicion;
-	return 0;
+	return;
 }
