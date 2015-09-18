@@ -58,6 +58,7 @@ void SUB (unsigned long *Rd,unsigned long *Rn, unsigned long *Rm);
 * \param Rd Resultado de la operacion.
 * \param Rn Primer valor de operacion.
 * \param Rm Segundo valor de operacion.
+* \param Banderas Es un arreglo donde se guardaran los resutados de da las banderas.
 * \return void
 */
 void Bandera (unsigned long *Rd, unsigned long *Rn, unsigned long *Rm, unsigned long *Banderas);
@@ -152,7 +153,7 @@ void MUL(unsigned long *Rd, unsigned long Rn, unsigned long Rm);
 /** 
 * \brief funcion para hacer el complemento a un registro.
 * \param Rd Resultado de la operacion.
-* \retrn void.
+* \return void.
 */ 
 void MVN(unsigned long *Rd,unsigned long *Rn);
 /** 
@@ -195,8 +196,8 @@ void RSB(unsigned long *Rd);
 void SBC(unsigned long *Rd, unsigned long *Rn, unsigned long *Rm);
 /** 
 * \brief Funcion que hace una AND bit a bit, pero solo modifica las banderas.
-* \parm Rn Primer valor ingresado para hacer la operacion.
-* \pram Rm Segundo valor ingresado para hacer la operacion.
+* \param Rn Primer valor ingresado para hacer la operacion.
+* \param Rm Segundo valor ingresado para hacer la operacion.
 * \return void.
 */
 void TST (unsigned long *Rd, unsigned long *Rn);
