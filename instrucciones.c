@@ -43,13 +43,25 @@ void Bandera (unsigned long *Rd, unsigned long *Rn, unsigned long *Rm, unsigned 
 	{
 		*(Banderas+0)=1;
 	}
+	else 
+	{
+		*(Banderas+0)=0;
+	}
 	if ((*Rd=4294967296) || (*Rd=2147483648))
 	{
 		*(Banderas+1)=1;
 	}
+	else 
+	{
+		*(Banderas+1)=0;
+	}
 	if (*Rd>4294967295)
 	{
 		*(Banderas+2)=1;
+	}
+	else
+	{
+		*(Banderas+2)=0;
 	}
 	if (*Rd>2147483647)
 	{
