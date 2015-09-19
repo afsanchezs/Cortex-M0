@@ -37,41 +37,41 @@ void SUB (unsigned long *Rd,unsigned long *Rn, unsigned long *Rm)
 	*Rd=*Rn-*Rm;	// Esta operación es para realizar la resta entre dos regitros 
 	return;
 }
-void Bandera (unsigned long *Rd, unsigned long *Rn, unsigned long *Rm, unsigned long *Banderas)
-{
-	if (*Rd>2147483647)
+void Bandera (unsigned long *Rd, unsigned long *Rn, unsigned long *Rm, unsigned long *Banderas) 
+{				// La variable Bandera es un vector que contiene el resultado de las banderas "Bandera=[N,Z,C,V]"
+	if (*Rd>2147483647)	// Donde 2147483647 es el mayor numero con signo
 	{
-		*(Banderas+0)=1;
+		*(Banderas+0)=1;// Indica que si el registro es mayor a 2147483647 la bandera de N se activa y se almacena un 1
 	}
 	else 
 	{
-		*(Banderas+0)=0;
+		*(Banderas+0)=0;// Indica que si el registro no es mayor a 2147483647 la bandera N no se activa y se almacena un 0
 	}
 	if ((*Rd=4294967296) || (*Rd=2147483648))
 	{
-		*(Banderas+1)=1;
+		*(Banderas+1)=1; // Indica que si el registro es igual a 4294967296 o a 2147483648 la bandera Z se activa almacenando un 1
 	}
 	else 
 	{
-		*(Banderas+1)=0;
+		*(Banderas+1)=0;// Indica que si el registro es diferente a 4294967296 o a 2147483648 la bandera Z no se activa almacenando un 0
 	}
 	if (*Rd>4294967295)
 	{
-		*(Banderas+2)=1;
+		*(Banderas+2)=1; //Indica que si el registro es mayor a 4294967295 la bandera C se activa, almacenando un 1.
 	}
 	else
 	{
-		*(Banderas+2)=0;
+		*(Banderas+2)=0; //Indica que si el registro es menor a 4294967295 la bandera C no se activa, almacenando un 0.
 	}
 	if (*Rd>2147483647)
 	{
 		if ((*Rn<2147483647)&&(*Rm<2147483647))
 		{
-			*(Banderas+3)=1;
+			*(Banderas+3)=1; //Indica que si los dos registros de operacion son menores a 2147483647 la bandera V se activa, almacenando un 1.
 		}
 		else 
 		{
-			*(Banderas+3)=0;
+			*(Banderas+3)=0; //Indica que si los dos registros de operacion no son menores a 2147483647 la bandera V no se activa, almacenando un 0.
 		}
 	}
 	else 
