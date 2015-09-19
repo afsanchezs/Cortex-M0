@@ -8,11 +8,10 @@
 */
 int main()
 {
-	unsigned long registro[]={0,1,2,3,4,5,6,7,8,9,10,11},*R,*N,*Z,*C,*V;
-	N=0;Z=0;C=0;V=0;	// Se inicializan las banderas es estos valores para corroborar el funcionamiento de la interfaz
+	unsigned long registro[]={0,1,2,3,4,5,6,7,8,9,10,11},*Banderas,lines,contador=0,*R;
+	FILE* fp;
 	R=registro;
-	visualizacion_registro(R,N,Z,C,V);
-		//------- No modificar ------//	
+	//------- No modificar ------//	
 		int i, num_instructions;
 		ins_t read;
 		char** instructions;
@@ -27,9 +26,21 @@ int main()
 	
 		instructions = read.array; /* Arreglo con las instrucciones */
 	//---------------------------//	
-
-
-
+	fp = fopen("code.txt", "r");
+	lines = countLines(fp)-1;
+		//------- No modificar ------//	
+		/* Libera la memoria reservada para las instrucciones */
+		for(i=0; i<num_instructions; i++){
+			free(read.array[i]);
+		}	
+		free(read.array);
+		//---------------------------//
+	while (contador>lines)
+	{	
+		visualizacion_registro(R,Banderas);
+		contador++;
+		
+	}
 	/* Ejemplo de uso 
 		Llama la función que separa el mnemonico y los operandos
 		Llama la instrucción que decodifica y ejecuta la instrucción
