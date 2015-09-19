@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ncurses.h>
 #include "visualizacion.h"
-void visualizacion_registro(unsigned long *R, unsigned long *N, unsigned long *Z, unsigned long *C, unsigned long *V)
+void visualizacion_registro(unsigned long *R, unsigned long *Banderas)
 {
 	unsigned long i;			 // i es equivalente a un contador// 	
 	initscr();				/* Inicia modo curses */
@@ -23,7 +23,7 @@ void visualizacion_registro(unsigned long *R, unsigned long *N, unsigned long *Z
 			printw("	Registro[%lu]=%lu\t",i,R[i]);  	   // Linea del codigo que muestra el registro ingresado// 
 		}
 	printw("\n\n\t\t\t\t   Banderas\n\n");	/* Se coloca un Titulo para indicar donde están los valores de las banderas */
-	printw("\tN=%lu\t\t    Z=%lu\t\t     C=%lu\t\t    V=%lu",N,Z,C,V);  /*Se muestran las banderas en la interfaz*/
+	printw("\tN=%lu\t\t    Z=%lu\t\t     C=%lu\t\t    V=%lu",Banderas[0],Banderas[1],Banderas[2],Banderas[3]);  /*Se muestran las banderas en la interfaz*/
 	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	refresh();				/* Imprime en la pantalla*/
 	attroff(COLOR_PAIR(1));			/* DEshabilita los colores Pair 1 */
