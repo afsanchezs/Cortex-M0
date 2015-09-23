@@ -1,3 +1,4 @@
+#include <stdint.h>
 /**
 * \brief Funcion que realiza un salto si es igual
 * \param Banderas Puntero para el registro de las banderas
@@ -5,7 +6,7 @@
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BEQ(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BEQ(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que reliza un salto si es diferente
 * \param Banderas Puntero para el registro de las banderas
@@ -13,7 +14,7 @@ void BEQ(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BNE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BNE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que reliza un salto si es mayor o igual (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -21,7 +22,7 @@ void BNE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BCS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BCS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcin que reliza un salto si es menor (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -29,7 +30,7 @@ void BCS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BCC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BCC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es negativo
 * \param Banderas Puntero para el registro de las banderas
@@ -37,7 +38,7 @@ void BCC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BMI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BMI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es positivo
 * \param Banderas Puntero para el registro de las banderas
@@ -45,7 +46,7 @@ void BMI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BPL(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BPL(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si hay sobreflujo
 * \param Banderas Puntero para el registro de las banderas
@@ -53,7 +54,7 @@ void BPL(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BVS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BVS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si no hay sobreflujo
 * \param Banderas Puntero para el registro de las banderas
@@ -61,7 +62,7 @@ void BVS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void.
 */ 
-void BVC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BVC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es mayor (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -69,7 +70,7 @@ void BVC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BHI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BHI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es menor o igual (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -77,7 +78,7 @@ void BHI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BLS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que genera un salto si es mayor o igual (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -85,7 +86,7 @@ void BLS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BGE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BGE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es menor (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -93,7 +94,7 @@ void BGE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BLT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es mayor (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -101,7 +102,7 @@ void BLT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void.
 */ 
-void BGT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BGT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realizaun un salto si es menor o igual (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -109,24 +110,24 @@ void BGT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion);
+void BLE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto sin condicion, de cualquier forma
 * \param PC Puntero a el registro PC
 * \param Posicion Siguiente posicion
 * \return void.
 */ 
-void BAL(unsigned long *PC,unsigned long Posicion);
+void BAL(uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto guardando posicion instruccion siguiente en LR
 * \param PC Puntero a el registro PC 
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BL(unsigned long *PC,unsigned long Posicion); 
+void BL(uint32_t *PC,uint32_t Posicion); 
 /**
 * \brief Funcion que realiza un salto a la posicion guardada en LR
 * \param *PC Puntero a el registro PC
 * \return void
 */ 
-void BX(unsigned long *PC);
+void BX(uint32_t *PC);
