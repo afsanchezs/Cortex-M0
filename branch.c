@@ -1,5 +1,5 @@
 #include "branch.h"
-void BEQ(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BEQ(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[1]==1)
 	{
@@ -11,7 +11,7 @@ void BEQ(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BNE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BNE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[1]==0)
 	{
@@ -23,7 +23,7 @@ void BNE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BCS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BCS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[2]==1)
 	{
@@ -35,7 +35,7 @@ void BCS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BCC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BCC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[2]==0)
 	{
@@ -47,7 +47,7 @@ void BCC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BMI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BMI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[0]==1)
 	{
@@ -59,7 +59,7 @@ void BMI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BPL(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BPL(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[0]==0)
 	{
@@ -71,7 +71,7 @@ void BPL(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BVS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BVS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[3]==1)
 	{
@@ -83,7 +83,7 @@ void BVS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BVC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BVC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[3]==0)
 	{
@@ -95,7 +95,7 @@ void BVC(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BHI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BHI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if((Banderas[2]==1)&&(Banderas[1]==0))
 	{
@@ -107,7 +107,7 @@ void BHI(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BLS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BLS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if((Banderas[2]==0)||(Banderas[1]==1))
 	{
@@ -119,7 +119,7 @@ void BLS(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BGE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BGE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[0]==Banderas[3])
 	{
@@ -131,7 +131,7 @@ void BGE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BLT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BLT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if(Banderas[0]!=Banderas[3])
 	{
@@ -143,7 +143,7 @@ void BLT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BGT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BGT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if((Banderas[1]==0)&&(Banderas[0]==Banderas[3]))
 	{
@@ -155,7 +155,7 @@ void BGT(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BLE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
+void BLE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
 	if((Banderas[1]==0)||(Banderas[0]!=Banderas[3]))
 	{
@@ -167,7 +167,7 @@ void BLE(unsigned long *Banderas,unsigned long *PC,unsigned long Posicion)
 	}
 	return;
 }
-void BAL(unsigned long *PC,unsigned long Posicion)
+void BAL(uint32_t *PC,uint32_t Posicion)
 {
 	*PC=Posicion;
 	return;
