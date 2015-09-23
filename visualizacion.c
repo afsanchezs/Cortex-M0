@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <ncurses.h>
 #include "visualizacion.h"
-void visualizacion_registro(unsigned long *R, unsigned long *Banderas)
+void visualizacion_registro(uint32_t *R, uint32_t *Banderas)
 {
-	unsigned long i;			 // i es equivalente a un contador// 	
+	uint32_t i;			 // i es equivalente a un contador// 	
 	initscr();				/* Inicia modo curses */
 	curs_set(0);				/* Cursor Invisible */
 	raw();					/* Activa modo raw */
@@ -16,14 +16,15 @@ void visualizacion_registro(unsigned long *R, unsigned long *Banderas)
 	printw("\t\t\t\t   Registros\n\n");	/* Se coloca un Titulo para indicar donde están los registros */
 	for (i=0;i<=11;i++)
 		{
-			if((i==3)|(i==6)|(i==9)) /*Indica que cada 3 registros realice un salto de linea*/
+			if((i==2)|(i==4)|(i==6)|(i==8)|(i==10) ) /*Indica que cada 3 registros realice un salto de linea*/
 			{
 				printw("\n");
 			}
-			printw("	Registro[%lu]=%lu\t",i,R[i]);  	   // Linea del codigo que muestra el registro ingresado// 
+			printw("	Registro[%d]=%d\t",i,R[i]);  	   // Linea del codigo que muestra el registro ingresado// 
 		}
 	printw("\n\n\t\t\t\t   Banderas\n\n");	/* Se coloca un Titulo para indicar donde están los valores de las banderas */
-	printw("\tN=%lu\t\t    Z=%lu\t\t     C=%lu\t\t    V=%lu",Banderas[0],Banderas[1],Banderas[2],Banderas[3]);  /*Se muestran las banderas en la interfaz*/
+	printw("\tN=%d\t\t    Z=%d\t\t     C=%d\t\t    V=%d",Banderas[0],Banderas[1],Banderas[2],Banderas[3]);  /*Se muestran las banderas en la interfaz*/
+//	printw("%s",*instructions);	
 	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	refresh();				/* Imprime en la pantalla*/
 	attroff(COLOR_PAIR(1));			/* DEshabilita los colores Pair 1 */
