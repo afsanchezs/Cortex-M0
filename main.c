@@ -24,7 +24,6 @@ int main()
 		if(read.array==NULL)
 			return 0;	
 		instructions = read.array; //Arreglo con las instrucciones
-		printf("%d",num_instructions);	
 	while (contador<10)
 	{
 		R[contador]=rand () % 2147483647;
