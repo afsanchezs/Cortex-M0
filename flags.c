@@ -1,7 +1,7 @@
 #include "flags.h"
 void BanderaN (uint32_t *Rd, uint32_t *B) 
 {				// La variable Bandera es un vector que contiene el resultado de las B "Bandera=[N,Z,C,V]"
-	if (Rd>2147483647)	// Donde 2147483647 es el mayor numero con signo
+	if (*Rd>2147483647)	// Donde 2147483647 es el mayor numero con signo
 	{
 		*(B+0)=1;// Indica que si el registro es mayor a 2147483647 la bandera de N se activa y se almacena un 1
 	}
@@ -14,7 +14,7 @@ void BanderaN (uint32_t *Rd, uint32_t *B)
 
 void BanderaZ (uint32_t *Rd, uint32_t *B) 
 {
-	if (Rd==0)
+	if (*Rd==0)
 	{
 		*(B+1)=1; // Indica que si el registro es igual a 4294967296 o a 2147483648 la bandera Z se activa almacenando un 1
 	}
