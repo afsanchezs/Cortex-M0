@@ -111,7 +111,7 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	}
 	if(strcmp(instruction.mnemonic,"REVSH")==0)
 	{
-		REVSH(&R[instruction.op1_value]&R[instruction.op2_value],R,B);
+		REVSH(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
 }
 
