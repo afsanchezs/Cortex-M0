@@ -1,4 +1,7 @@
 #include <stdint.h>
+#include <stdio.h>
+#include <ncurses.h>
+#include "flags.h"
 /**
 *\ brief Funcion para visualizar los registros
 *\ param *R Puntero que señala la posicion de los registros almacenados.
