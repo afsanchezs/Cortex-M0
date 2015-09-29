@@ -12,12 +12,13 @@
 */
 int main()
 {
-	uint32_t registro[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},Banderas[4]={0},contador=0,*R;
+	uint32_t registro[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},Banderas[4]={0},contador=0,*R,*B;
 	int i,num_instructions;
 	char** instructions;
 	ins_t read;
 	instruction_t instruction;
 	R=registro;
+	B=Banderas;
 		num_instructions = readFile("code.txt", &read);
 		if(num_instructions==-1)
 			return 0;	
@@ -27,7 +28,7 @@ int main()
 	while (contador<10)
 	{
 		instruction = getInstruction(instructions[PC]); // Instrucción en la posición 0
-		decodeInstruction(instruction, registro, *Banderas); // Debe ser modificada de acuerdo a cada código
+		decodeInstruction(instruction, registro, *B); // Debe ser modificada de acuerdo a cada código
 		visualizacion_registro(R,Banderas);
 		contador++;
 		

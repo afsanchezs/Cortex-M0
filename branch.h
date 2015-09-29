@@ -6,7 +6,7 @@
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BEQ(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BEQ(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que reliza un salto si es diferente
 * \param Banderas Puntero para el registro de las banderas
@@ -14,7 +14,7 @@ void BEQ(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BNE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BNE(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que reliza un salto si es mayor o igual (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -22,7 +22,7 @@ void BNE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BCS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BCS(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcin que reliza un salto si es menor (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -30,7 +30,7 @@ void BCS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BCC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BCC(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es negativo
 * \param Banderas Puntero para el registro de las banderas
@@ -38,7 +38,7 @@ void BCC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BMI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BMI(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es positivo
 * \param Banderas Puntero para el registro de las banderas
@@ -46,7 +46,7 @@ void BMI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BPL(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BPL(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si hay sobreflujo
 * \param Banderas Puntero para el registro de las banderas
@@ -54,7 +54,7 @@ void BPL(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BVS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BVS(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si no hay sobreflujo
 * \param Banderas Puntero para el registro de las banderas
@@ -62,7 +62,7 @@ void BVS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void.
 */ 
-void BVC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BVC(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es mayor (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -70,7 +70,7 @@ void BVC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BHI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BHI(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es menor o igual (sin signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -78,7 +78,7 @@ void BHI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BLS(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que genera un salto si es mayor o igual (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -86,7 +86,7 @@ void BLS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BGE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BGE(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es menor (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -94,7 +94,7 @@ void BGE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BLT(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto si es mayor (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -102,7 +102,7 @@ void BLT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void.
 */ 
-void BGT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BGT(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realizaun un salto si es menor o igual (con signo)
 * \param Banderas Puntero para el registro de las banderas
@@ -110,7 +110,7 @@ void BGT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
 * \param Posicion Siguiente posicion
 * \return void
 */ 
-void BLE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion);
+void BLE(uint32_t *B,uint32_t *PC,uint32_t Posicion);
 /**
 * \brief Funcion que realiza un salto sin condicion, de cualquier forma
 * \param PC Puntero a el registro PC

@@ -1,5 +1,6 @@
 #include "visualizacion.h"
-void visualizacion_registro(uint32_t *R, uint32_t *Banderas)
+#include "flags.h"
+void visualizacion_registro(uint32_t *R, uint32_t *B)
 {
 	uint32_t i;			 // i es equivalente a un contador// 	
 	initscr();				/* Inicia modo curses */
@@ -20,8 +21,8 @@ void visualizacion_registro(uint32_t *R, uint32_t *Banderas)
 			}
 			printw("	Registro[%d]=%d\t",i,R[i]);  	   // Linea del codigo que muestra el registro ingresado// 
 		}
-	printw("\n\n\t\t\t\t   Banderas\n\n");	/* Se coloca un Titulo para indicar donde están los valores de las banderas */
-	printw("\tN=%d\t\t    Z=%d\t\t     C=%d\t\t    V=%d",Banderas[0],Banderas[1],Banderas[2],Banderas[3]);  /*Se muestran las banderas en la interfaz*/
+	printw("\n\n\t\t\t\t   Banderas\n\n");	/* Se coloca un Titulo para indicar donde están los valores de las B */
+	printw("\tN=%d\t\t    Z=%d\t\t     C=%d\t\t    V=%d",B[0],B[1],B[2],B[3]);  /*Se muestran las B en la interfaz*/
 //	printw("%s",*instructions);	
 	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	refresh();				/* Imprime en la pantalla*/

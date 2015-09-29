@@ -1,190 +1,195 @@
 #include "instrucciones.h"
+#include "flags.h"
 #define PC 15
-void ADD(uint32_t *Rd, uint32_t Rn, uint32_t Num, uint32_t *R, uint32_t *Banderas)
+#define N 0
+#define Z 1
+#define C 2
+#define V 3
+void ADD(uint32_t *Rd, uint32_t Rn, uint32_t Num, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn+Num;  // Esta operación es la suma entre un registro y
 		     // un numero.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	BanderaV(*Rd,Rn,Num,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	BanderaV(*Rd,Rn,Num,*B);
 	R[PC]++;
 	return;
 }
-void ADDS(uint32_t *Rd, uint32_t Rn,uint32_t Rm, uint32_t *R, uint32_t *Banderas)
+void ADDS(uint32_t *Rd, uint32_t Rn,uint32_t Rm, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn+Rm;	// Esta operación representa la suma entre dos registros.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	BanderaV(*Rd,Rn,Rm,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	BanderaV(*Rd,Rn,Rm,*B);
 	R[PC]++;
 	return;
 }
-void ORR (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *Banderas)
+void ORR (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn | Rm;  //El caracter "|", es el encargado de realizar la operacion de la compuerta lógica OR, la operación es realizada entre dos registros.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	BanderaV(*Rd,Rn,Rm,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	BanderaV(*Rd,Rn,Rm,*B);
 	R[PC]++;
 	return;
 }
-void EOR (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *Banderas)
+void EOR (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn ^ Rm;	// El caracter "^" es el encargado de realizar la operación  de la compuerta lógica de XOR, la operacion es realizada entre dos registros.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	BanderaV(*Rd,Rn,Rm,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	BanderaV(*Rd,Rn,Rm,*B);
 	R[PC]++;
 	return;		
 }
-void MOV (uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *Banderas)
+void MOV (uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	Rd=Rn;	// Esta operación realiza una copia de un registro sin alterar el registro de ingreso.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
 	Banderas[C]=0;
 	Banderas[V]=0;
 	R[PC]++;
 	return;
 }
-void AND (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *Banderas)
+void AND (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn & Rm;	// El caracter "&" es el encargado de realizar la operacion de la compuerta lógica de AND, la operación es realizada entre dos registros.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	BanderaV(*Rd,Rn,Num,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	BanderaV(*Rd,Rn,Rm,*B);
 	R[PC]++;
 	return;		
 }
-void SUB (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *Banderas)
+void SUB (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn-Rm;	// Esta operación es para realizar la resta entre dos regitros 
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	BanderaV(*Rd,Rn,Rm,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	BanderaV(*Rd,Rn,Rm,*B);
 	R[PC]++;
 	return;
 }
 
-void LSL(uint32_t *Rd, uint32_t Rn, uint32_t Num, uint32_t *R, uint32_t *Banderas)
+void LSL(uint32_t *Rd, uint32_t Rn, uint32_t Num, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn<<Num; 	// La operacion representada con los caracteres "<<" implican un movimineto hacia la izquierda un Numero determinado de veces 
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	BanderaV(*Rd,Rn,Num,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	BanderaV(*Rd,Rn,Num,*B);
 	R[PC]++;
 	return;			
 }
-void LSLS(uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *Banderas)
+void LSLS(uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	*Rd=*Rd<<Rn;   // La operacion representada con los caracteres "<<" implican un movimiento hacia la izquierda dependiendo del valor del registro de ingreso.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
 	Banderas[V]=0;
 	R[PC]++;
 	return;
 }
-void LSR(uint32_t *Rd, uint32_t Rn, uint32_t Num, uint32_t *R, uint32_t *Banderas)
+void LSR(uint32_t *Rd, uint32_t Rn, uint32_t Num, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn>>Num;	// La operacion representada con los caracteres ">>" implican un movimineto hacia la derecha un Numero determinado de veces. 
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	BanderaV(*Rd,Rn,Num,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	BanderaV(*Rd,Rn,Num,*B);
 	R[PC]++;
 	return;			
 }
-void LSRS(uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *Banderas)
+void LSRS(uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	*Rd=*Rd>>Rn;	// La operacion representada con los caracteres ">>" implican un movimineto hacia la derecha dependiendo del valor del registro ingresado. 
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
 	Banderas[V]=0;
 	R[PC]++;
 	return;
 }
-void ROR(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *Banderas)
+void ROR(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	/**Rd=*Rd>>32;
    	Rn=Rn<<32;
    	*Rd=*Rd||Rn;
-   	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
+   	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
 	Banderas[V]=0;
 	R[PC]++;
 	return;*/
 }
-void ASRS(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *Banderas)
+void ASRS(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
    	Rn=~0<<(32-Rn);
    	*Rd=(*Rd>>1)|Rn;
-   	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	Banderas[V]=0;
+   	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	B[V]=0;
 	R[PC]++;
 	return;
 }
-void REV(uint32_t *Rd,uint32_t Rn, uint32_t *R, unit32_t *Banderas)
+void REV(uint32_t *Rd,uint32_t Rn, uint32_t *R, unit32_t *B)
 {
     	Rn=*Rd<<24;
     	Rn=Rn|*Rd>>24;
     	*Rd=Rn|((((*Rd<<8)>>24)<<8)|(((*Rd<<16)>>24)<<16));
-      	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	Banderas[V]=0;
+      	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	B[V]=0;
 	R[PC]++;
 	return;
 }
-void REV16(uint32_t *Rd,uint32_t Rn,uint32_t *R, unit32_t *Banderas)
+void REV16(uint32_t *Rd,uint32_t Rn,uint32_t *R, unit32_t *B)
 {
 	Rn=((*Rd<<24)>>16)|((*Rd<<16)>>24);
     	*Rd=Rn|(((*Rd>>24)<<16)|((*Rd>>16)<<24));
-    	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	Banderas[V]=0;
+    	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	B[V]=0;
 	R[PC]++;
 	return;
 }
-void BIC(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *Banderas)
+void BIC(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	*Rd&=~Rn; 	// El simbolo "~" realiza el complemento de un registro, por lo tanto esta funcion realiza una operacion AND entre un registro y el complemento del registro de ingreso.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	Banderas[V]=0;
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	B[V]=0;
 	R[PC]++;
 	return;
 }
-void MVN(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *Banderas)
+void MVN(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	*Rd=~Rn;	// el simbolo "~" realiza el complemento de un registro, por lo tanto esta funcion guarda el complemento de un registro.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	Banderas[V]=0;
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	B[V]=0;
 	R[PC]++;
 	return;
 }
-void RSBS(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *Banderas)
+void RSBS(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	*Rd=(~Rn)+1;   // Guarda el complemento a dos de un registro ya ingresado.
-	BanderaN(*Rd,*Banderas);
-	BanderaZ(*Rd,*Banderas);
-	BanderaC(*Rd,*Banderas);
-	Banderas[V]=0;
+	BanderaN(*Rd,*B);
+	BanderaZ(*Rd,*B);
+	BanderaC(*Rd,*B);
+	B[V]=0;
 	R[PC]++;
 	return;
 	

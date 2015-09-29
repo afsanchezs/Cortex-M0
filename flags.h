@@ -6,7 +6,7 @@
  * \param Rm Segundo valor a operar
  * \param Banderas Vector donde se almacenara el resultado de la modificacion de las banderas.
  */ 
-void BanderaN (uint32_t *Rd, uint32_t *Banderas);
-void BanderaZ (uint32_t *Rd, uint32_t *Banderas); 
-void BanderaC (uint32_t *Rd, uint32_t *Banderas); 
-void BanderaV (uint32_t *Rd, uint32_t *Rn, uint32_t *Rm, uint32_t *Banderas);
+void BanderaN (uint32_t *Rd, uint32_t *B);
+void BanderaZ (uint32_t *Rd, uint32_t *B); 
+void BanderaC (uint32_t *Rd, uint32_t *B); 
+void BanderaV (uint32_t *Rd, uint32_t Rn, uint32_t Rm, uint32_t *B);
