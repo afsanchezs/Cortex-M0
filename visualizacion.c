@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <ncurses.h>
 #include "visualizacion.h"
 void visualizacion_registro(uint32_t *R, uint32_t *Banderas)
 {
