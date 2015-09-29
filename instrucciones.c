@@ -51,8 +51,8 @@ void MOV (uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 	Rd=Rn;	// Esta operación realiza una copia de un registro sin alterar el registro de ingreso.
 	BanderaN(Rd,B);
 	BanderaZ(Rd,B);
-	Banderas[C]=0;
-	Banderas[V]=0;
+	B[C]=0;
+	B[V]=0;
 	R[PC]++;
 	return;
 }
@@ -93,7 +93,7 @@ void LSLS(uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B)
 	BanderaN(Rd,B);
 	BanderaZ(Rd,B);
 	BanderaC(Rd,B);
-	Banderas[V]=0;
+	B[V]=0;
 	R[PC]++;
 	return;
 }
@@ -113,7 +113,7 @@ void LSRS(uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B)
 	BanderaN(Rd,B);
 	BanderaZ(Rd,B);
 	BanderaC(Rd,B);
-	Banderas[V]=0;
+	B[V]=0;
 	R[PC]++;
 	return;
 }
