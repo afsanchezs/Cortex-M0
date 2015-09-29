@@ -28,7 +28,7 @@ int main()
 	while (contador<10)
 	{
 		instruction = getInstruction(instructions[PC]); // Instrucción en la posición 0
-		decodeInstruction(instruction, registro, *B); // Debe ser modificada de acuerdo a cada código
+		decodeInstruction(instruction, registro, B); // Debe ser modificada de acuerdo a cada código
 		visualizacion_registro(R,Banderas);
 		contador++;
 		
