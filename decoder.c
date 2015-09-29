@@ -76,7 +76,7 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	}
 	if(strcmp(instruction.mnemonic,"CMN")==0)
 	{
-		CMV(&R[instruction.op1_value],R[instruction.op2_value],R,B);
+		CMN(R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
 	if(strcmp(instruction.mnemonic,"CMPS")==0)
 	{
