@@ -1,7 +1,12 @@
 #include "branch.h"
+#define PC 15
+#define N 0
+#define Z 1
+#define C 2
+#define V 3
 void BEQ(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[1]==1)
+	if(Banderas[Z]==1)
 	{
 		*PC=Posicion;
 	}
@@ -13,7 +18,7 @@ void BEQ(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BNE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[1]==0)
+	if(Banderas[Z]==0)
 	{
 		*PC=Posicion;
 	}
@@ -25,7 +30,7 @@ void BNE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BCS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[2]==1)
+	if(Banderas[C]==1)
 	{
 		*PC=Posicion;
 	}
@@ -37,7 +42,7 @@ void BCS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BCC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[2]==0)
+	if(Banderas[C]==0)
 	{
 		*PC=Posicion;
 	}
@@ -49,7 +54,7 @@ void BCC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BMI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[0]==1)
+	if(Banderas[N]==1)
 	{
 		*PC=Posicion;
 	}
@@ -61,7 +66,7 @@ void BMI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BPL(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[0]==0)
+	if(Banderas[N]==0)
 	{
 		*PC=Posicion;
 	}
@@ -73,7 +78,7 @@ void BPL(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BVS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[3]==1)
+	if(Banderas[C]==1)
 	{
 		*PC=Posicion;
 	}
@@ -85,7 +90,7 @@ void BVS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BVC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[3]==0)
+	if(Banderas[C]==0)
 	{
 		*PC=Posicion;
 	}
@@ -97,7 +102,7 @@ void BVC(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BHI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if((Banderas[2]==1)&&(Banderas[1]==0))
+	if((Banderas[N]==1)&&(Banderas[Z]==0))
 	{
 		*PC=Posicion;
 	}
@@ -109,7 +114,7 @@ void BHI(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BLS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if((Banderas[2]==0)||(Banderas[1]==1))
+	if((Banderas[C]==0)||(Banderas[N]==1))
 	{
 		*PC=Posicion;
 	}
@@ -121,7 +126,7 @@ void BLS(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BGE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[0]==Banderas[3])
+	if(Banderas[Z]==Banderas[C])
 	{
 		*PC=Posicion;
 	}
@@ -133,7 +138,7 @@ void BGE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BLT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if(Banderas[0]!=Banderas[3])
+	if(Banderas[N]!=Banderas[C])
 	{
 		*PC=Posicion;
 	}
@@ -145,7 +150,7 @@ void BLT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BGT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if((Banderas[1]==0)&&(Banderas[0]==Banderas[3]))
+	if((Banderas[Z]==0)&&(Banderas[N]==Banderas[V]))
 	{
 		*PC=Posicion;
 	}
@@ -157,7 +162,7 @@ void BGT(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 }
 void BLE(uint32_t *Banderas,uint32_t *PC,uint32_t Posicion)
 {
-	if((Banderas[1]==0)||(Banderas[0]!=Banderas[3]))
+	if((Banderas[Z]==0)||(Banderas[N]!=Banderas[V]))
 	{
 		*PC=Posicion;
 	}
