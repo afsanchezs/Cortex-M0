@@ -82,11 +82,11 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		if(instruction.op2_type=='R')
 		{
-			CMPS(&R[instruction.op1_value],R[instruction.op2_value],R,B);
+			CMPS(R[instruction.op1_value],R[instruction.op2_value],R,B);
 		}
 		else
 		{
-			CMP(&R[instruction.op1_value],R[instruction.op2_value],R,B);
+			CMP(R[instruction.op1_value],R[instruction.op2_value],R,B);
 		}
 	}
 	if(strcmp(instruction.mnemonic,"MUL")==0)

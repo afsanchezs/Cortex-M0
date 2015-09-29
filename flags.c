@@ -1,5 +1,5 @@
 #include "flags.h"
-void BanderaN (uint32_t Rd, uint32_t B) 
+void BanderaN (uint32_t *Rd, uint32_t *B) 
 {				// La variable Bandera es un vector que contiene el resultado de las B "Bandera=[N,Z,C,V]"
 	if (Rd>2147483647)	// Donde 2147483647 es el mayor numero con signo
 	{
