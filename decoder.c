@@ -21,7 +21,7 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		EOR(&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],R,B);
 	}
-	if(strcmp(instruction.mnemonic,"MOV")==0)
+	if(strcmp(instruction.mnemonic,"MOVS")==0)
 	{
 		MOV(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
@@ -61,20 +61,20 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	}
 	if(strcmp(instruction.mnemonic,"ASRS")==0)
 	{
-		if(instruction.op3_type=='R')
+	/*	if(instruction.op3_type=='R')
 		{
 			ASR(&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],R,B);
 		}
 		else
-		{
+		{ */
 			ASRS(&R[instruction.op1_value],R[instruction.op2_value],R,B);
-		}
+		//}
 	}
 	if(strcmp(instruction.mnemonic,"BICS")==0)
 	{
-		BICS(&R[instruction.op1_value],R[instruction.op2_value],R,B);
+		BIC(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
-	if(strcmp(instruction.mnemonic,"CMN")==0)
+/*	if(strcmp(instruction.mnemonic,"CMN")==0)
 	{
 		CMN(R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
@@ -88,11 +88,11 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 		{
 			CMP(R[instruction.op1_value],R[instruction.op2_value],R,B);
 		}
-	}
+	}		
 	if(strcmp(instruction.mnemonic,"MUL")==0)
 	{
 		MUL(&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],R,B);
-	}
+	}		*/
 	if(strcmp(instruction.mnemonic,"MVN")==0)
 	{
 		MVN(&R[instruction.op1_value],R[instruction.op2_value],R,B);
@@ -109,10 +109,10 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		REV16(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
-	if(strcmp(instruction.mnemonic,"REVSH")==0)
+/*	if(strcmp(instruction.mnemonic,"REVSH")==0)
 	{
 		REVSH(&R[instruction.op1_value],R[instruction.op2_value],R,B);
-	}
+	}*/
 }
 
 
