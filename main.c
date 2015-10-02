@@ -12,7 +12,7 @@
 */
 int main()
 {
-	uint32_t registro[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},Banderas[4]={0},contador=0,*R,*B;
+	uint32_t registro[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},Banderas[4]={0,0,0,0},contador=0,*R,*B;
 	int i,num_instructions;
 	char** instructions;
 	ins_t read;
@@ -29,7 +29,7 @@ int main()
 	{
 		instruction = getInstruction(instructions[PC]); // Instrucción en la posición 0
 		decodeInstruction(instruction, registro, B); // Debe ser modificada de acuerdo a cada código
-		visualizacion_registro(R,Banderas);
+		visualizacion_registro(R,B,instruction);
 		contador++;
 		
 	}

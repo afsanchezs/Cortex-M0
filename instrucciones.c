@@ -163,7 +163,7 @@ void REV16(uint32_t *Rd,uint32_t Rn,uint32_t *R, uint32_t *B)
 	R[PC]++;
 	return;
 }
-void BIC(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
+void BICS(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	*Rd&=~Rn; 	// El simbolo "~" realiza el complemento de un registro, por lo tanto esta funcion realiza una operacion AND entre un registro y el complemento del registro de ingreso.
 	BanderaN(Rd,B);

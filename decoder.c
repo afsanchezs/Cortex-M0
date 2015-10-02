@@ -72,7 +72,7 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	}
 	if(strcmp(instruction.mnemonic,"BICS")==0)
 	{
-		BIC(&R[instruction.op1_value],R[instruction.op2_value],R,B);
+		BICS(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
 /*	if(strcmp(instruction.mnemonic,"CMN")==0)
 	{
