@@ -227,6 +227,4 @@ void SBC(uint32_t *Rd, uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B);
 */
 void TST (uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B);
 
-void CMN(uint32_t Rn, unint32_t Rm,uint32_t *R, uint32_t *B);
-void CMP(uint32_t Rn,uint32_t Rm, uint32_t *R, uint32_t *B);
-void MUL(uint32_t Rn,uint32_t Rm,uint32_t *R, uint32_t *B);
+
