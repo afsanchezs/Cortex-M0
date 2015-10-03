@@ -23,7 +23,14 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	}
 	if(strcmp(instruction.mnemonic,"MOVS")==0)
 	{
-		MOV(&R[instruction.op1_value],R[instruction.op2_value],R,B);
+		if (instruction.op2_type=='R')
+		{
+			MOV(&R[instruction.op1_value],R[instruction.op2_value],R,B);
+		}
+		else
+		{
+			MOV(&R[instruction.op1_value],instruction.op2_value,R,B);
+		}
 	}
 	if(strcmp(instruction.mnemonic,"AND")==0)
 	{
