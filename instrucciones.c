@@ -198,3 +198,25 @@ void NOP(uint32_t *R)
 	R[PC]++;
 	return;			
 }
+void CMN(uint32_t Rn, unint32_t Rm,uint32_t *R, uint32_t *B)/
+{
+    	uint32_t rd;
+    	rd=Rn+Rm;
+    	BanderaN(rd,B);
+    	BanderaZ(rd,B);
+    	BanderaC(rd,B);
+    	BanderaV(rd,Rn,Rm,B);
+    	R[PC]++;
+    	return;
+}
+
+void MUL(uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint32_t *R, uint32_t *B)//Funcion que multiplica dos registros
+{
+    	*Rd=Rn*Rm;
+	BanderaN(Rd,B);
+	BanderaZ(Rd,B);
+	BanderaC(Rd,B);
+	BanderaV(Rd,Rn,Rm,B);
+    	R[PC]++;
+    	return;
+}
