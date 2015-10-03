@@ -81,11 +81,11 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		BICS(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
-/*	if(strcmp(instruction.mnemonic,"CMN")==0)
+	if(strcmp(instruction.mnemonic,"CMN")==0)
 	{
 		CMN(R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
-	if(strcmp(instruction.mnemonic,"CMPS")==0)
+/*	if(strcmp(instruction.mnemonic,"CMPS")==0)
 	{
 		if(instruction.op2_type=='R')
 		{
@@ -95,11 +95,11 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 		{
 			CMP(R[instruction.op1_value],R[instruction.op2_value],R,B);
 		}
-	}		
+	}		*/
 	if(strcmp(instruction.mnemonic,"MUL")==0)
 	{
 		MUL(&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],R,B);
-	}		*/
+	}		
 	if(strcmp(instruction.mnemonic,"MVN")==0)
 	{
 		MVN(&R[instruction.op1_value],R[instruction.op2_value],R,B);
