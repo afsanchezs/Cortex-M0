@@ -7,8 +7,7 @@
 #define V 3
 void ADD(uint32_t *Rd, uint32_t Rn, uint32_t Num, uint32_t *R, uint32_t *B)
 {
-	*Rd=Rn+Num;  // Esta operación es la suma entre un registro y
-		     // un numero.
+	*Rd=Rn+Num;  // Esta operación es la suma entre un registro y un número
 	BanderaN(Rd,B);
 	BanderaZ(Rd,B);
 	BanderaC(Rd,B);

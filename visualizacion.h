@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <ncurses.h>
 #include "flags.h"
 #include "decoder.h"

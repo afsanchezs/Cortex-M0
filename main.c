@@ -12,7 +12,7 @@
 */
 int main()
 {
-	uint32_t registro[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},Banderas[4]={0,0,0,0},contador=0,*R,*B;
+	uint32_t registro[16]={7,8,9,10,11,12,13,14,15,16,17,0,0,0,0},Banderas[4]={0,0,0,0},contador=0,*R,*B;
 	int i,num_instructions;
 	char** instructions;
 	ins_t read;
