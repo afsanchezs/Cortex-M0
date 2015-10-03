@@ -198,14 +198,15 @@ void NOP(uint32_t *R)
 	R[PC]++;
 	return;			
 }
-void CMN(uint32_t Rn, unint32_t Rm,uint32_t *R, uint32_t *B)/
+void CMN(uint32_t Rn, uint32_t Rm,uint32_t *R, uint32_t *B)
 {
-    	uint32_t rd;
-    	rd=Rn+Rm;
-    	BanderaN(rd,B);
-    	BanderaZ(rd,B);
-    	BanderaC(rd,B);
-    	BanderaV(rd,Rn,Rm,B);
+    	uint32_t Rd,*Rx;    	
+	Rd=Rn+Rm;
+	Rx=&Rd;
+    	BanderaN(Rx,B);
+    	BanderaZ(Rx,B);
+    	BanderaC(Rx,B);
+    	BanderaV(Rx,Rn,Rm,B);
     	R[PC]++;
     	return;
 }
