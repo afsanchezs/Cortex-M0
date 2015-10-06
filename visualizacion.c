@@ -33,6 +33,8 @@ void visualizacion_registro(uint32_t *R, uint32_t *B, instruction_t instruction)
 	move(10,61);
 	printw("Proceso");
 	move(12,58);
+	printw("%s %c%d,%c%d,%c%d",instruction.mnemonic,instruction.op1_type,instruction.op1_value,instruction.op2_type,instruction.op2_value,instruction.op3_type,instruction.op3_value);
+	move(14,58);
 	printw("PC:%d",R[PC]);
 	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	refresh();				/* Imprime en la pantalla*/
