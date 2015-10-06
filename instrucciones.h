@@ -44,7 +44,7 @@ void EOR (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B);
 * \param *B Es el puntero que almacenas los resultados de las banderas
 * \return void
 */
-void MOV (uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B);
+void MOVS (uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B);
 /**
 * \brief Funcion para realizar AND dos registros
 * \param Rd Registro para el resultado
