@@ -45,9 +45,9 @@ void EOR (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 	R[PC]++;
 	return;		
 }
-void MOV (uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
+void MOVS (uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
-	*Rd=Rn;	// Esta operación realiza una copia de un registro sin alterar el registro de ingreso.
+	*Rd=56;	// Esta operación realiza una copia de un registro sin alterar el registro de ingreso.
 	BanderaN(Rd,B);
 	BanderaZ(Rd,B);
 	B[C]=0;
