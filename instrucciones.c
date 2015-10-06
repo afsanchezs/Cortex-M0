@@ -47,7 +47,7 @@ void EOR (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 }
 void MOVS (uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
-	*Rd=56;	// Esta operación realiza una copia de un registro sin alterar el registro de ingreso.
+	*Rd=Rn;	// Esta operación realiza una copia de un registro sin alterar el registro de ingreso.
 	BanderaN(Rd,B);
 	BanderaZ(Rd,B);
 	B[C]=0;
@@ -220,4 +220,13 @@ void MUL(uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint32_t *R, uint32_t *B)//Funcion
 	BanderaV(Rd,Rn,Rm,B);
     	R[PC]++;
     	return;
+}
+void CMP(uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
+{
+	if(Rn==Rm)
+	{
+	B[V]=0;
+	R[PC]++;
+	return;
+	}
 }
