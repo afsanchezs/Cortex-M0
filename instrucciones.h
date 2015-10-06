@@ -147,14 +147,6 @@ void CMN(uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B);
 */
 void CMP(uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B);
 /** 
-* \brief Funcion que modifica *B comparando un registro y un numero.
-* \param Rn Registro a comparar.
-* \param Num Numero para comparar con el registro.
-* \param *B Es el puntero que almacenas los resultados de las banderas
-* \return void.
-*/
-void CMPS(uint32_t Rn,uint32_t Num, uint32_t *R, uint32_t *B);
-/** 
 * \brief Funcion Multiplica dos registros, sin signo y almacena los 32 bits menos significativos del resultado en el regsitro de destino.
 * \param Rd Registro para el resultado de la operacion.
 * \param Rn Primer valor del reistro a multiplicar.
