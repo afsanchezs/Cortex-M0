@@ -27,7 +27,7 @@ int main()
 		instructions = read.array; //Arreglo con las instrucciones
 	while (contador<num_instructions)
 	{
-		instruction = getInstruction(instructions[PC]); // Instrucción en la posición 0
+		instruction = getInstruction(instructions[R[PC]]); // Instrucción en la posición 0
 		decodeInstruction(instruction, R, B); // Debe ser modificada de acuerdo a cada código
 		visualizacion_registro(R,B,instruction);
 		contador++;
