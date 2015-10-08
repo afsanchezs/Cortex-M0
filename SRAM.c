@@ -27,7 +27,7 @@ void PUSH(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
 	{
 		if (registers_list[i]==1)
 		{
-			*RAM[address]=R[i];
+			RAM[address]=R[i];
 		}
 	address-=4;
 
