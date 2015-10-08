@@ -1,6 +1,7 @@
 #include "decoder.h"
 #include "SRAM.h"
 #include "flags.h"
+#include "branch.h" 
 void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 {
 	if( strcmp(instruction.mnemonic,"ADDS") == 0 )
@@ -107,7 +108,66 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		REVSH(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}*/
-	
+	if (strcmp(instruction.mnemonic,"BEQ")==0)
+	{
+		BEQ(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BNE")==0)
+	{
+		BNE(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BCS")==0)
+	{
+		BCS(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BCC")==0)
+	{
+		BCC(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BMI")==0)
+	{
+		BMI(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BPL")==0)
+	{
+		BPL(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BVS")==0)
+	{
+		BVS(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BVC")==0)
+	{
+		BVC(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BHI")==0)
+	{
+		BHI(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BLS")==0)
+	{
+		BLS(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BGE")==0)
+	{
+		BGE(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BLT")==0)
+	{
+		BLT(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BGT")==0)
+	{
+		BGT(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BLE")==0)
+	{
+		BLE(B,R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BAL")==0)
+	{
+		BAL(R,instruction.op1_value);
+	}
 }
 instruction_t getInstruction(char* instStr)
 {
