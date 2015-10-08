@@ -19,7 +19,7 @@ void visualizacion_registro(uint32_t *R, uint32_t *B, instruction_t instruction)
 	for (i=0;i<=11;i++)
 		{
 			move((5+i),3);		
-			printw("R%d=%d",i,R[i]);  	   // Linea del codigo que muestra el registro ingresado// 
+			printw("R%d=%x",i,R[i]);  	   // Linea del codigo que muestra el registro ingresado// 
 		}
 	move(3,60);
 	printw("Banderas");	/* Se coloca un Titulo para indicar donde están los valores de las B */
