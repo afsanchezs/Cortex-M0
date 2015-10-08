@@ -29,9 +29,9 @@ void PUSH(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
 		{
 			RAM[address]=R[i];
 		}
-	address-=4;
+	address+=4;
 
 	}
-	SP=SP+4*(BitCount(registers_list));
+	SP=SP-4*(BitCount(registers_list));
 
 }
