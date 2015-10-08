@@ -1,4 +1,5 @@
 #include "decoder.h"
+#include "SRAM.h"
 #include "flags.h"
 void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 {
@@ -115,6 +116,7 @@ instruction_t getInstruction(char* instStr)
 		.registers_list = {0},
 		.op3_type  = 'N',
 		.op3_value = 0
+		
 	};
 	char* split = (char*)malloc(strlen(instStr)+1);
 	int num=0;
@@ -157,6 +159,7 @@ instruction_t getInstruction(char* instStr)
 				instruction.op3_type  = split[0];
 				instruction.op3_value = (uint32_t)strtoll(split+1, NULL, 0);			
 				break;
+
 		}
 		if(split != NULL){
 			split = strtok(NULL, " ,.");

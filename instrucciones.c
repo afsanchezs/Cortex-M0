@@ -223,10 +223,14 @@ void MUL(uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint32_t *R, uint32_t *B)//Funcion
 }
 void CMP(uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 {
-	if(Rn==Rm)
-	{
-	B[V]=0;
+	uint32_t Rd,*Rx;
+	Rd=Rn-Rm;
+	Rx=&Rd;
+    	BanderaN(Rx,B);
+    	BanderaZ(Rx,B);
+    	BanderaC(Rx,B);
+    	BanderaV(Rx,Rn,Rm,B);
 	R[PC]++;
 	return;
-	}
+
 }

@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdint.h>
 #include "instrucciones.h"
+#include "SRAM.h"
 
 
 typedef struct

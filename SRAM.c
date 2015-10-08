@@ -1,19 +1,34 @@
-/*#include "SRAM.h"
+#include <stdint.h>
+#include "SRAM.h"
+#include <stdio.h>
 
-void PUSH(uint32_t *registro,uint32_t *R1,uint32_t *R2,uint32_t *R3)
+uint8_t BitCount(uint8_t  registers_list)
 {
-
-int *Mem[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},i,n;  //Se inicia una memoria vacia
-uint32_t address, *SP=&Mem[1];     // Se crea la variable address y el puntero SP se coloca apuntanda a la primer direccion
-address=SP-12
-n=3         //Numero de registros ingresados
-for (i=0;i<=n;i++)
-{
-     Mem[anddress+4]=R[i];
-     address=address-4;
-     SP=SP-12
+	uint32_t i,cont=0;
+	for(i=0;i<=15;i++)
+	{
+		if(registers_list[i]!=0)
+		{
+			cont++;
+		}		
+	
+	}
+return cont;
 
 }
+void PUSH(uint32_t *SP,uint32_t *R,uint32_t *RAM)
+{
+	uint32_t address;
+	uint32_t i=0;
+	for(i=0;i<=15;i++)
+	{
+		if (registers[i]==1)
+		{
+			RAM[address][4]=R[i];
+		}
+	address-=4;
 
+	}
+	SP=SP+4*(bitCount);
 
 }*/
