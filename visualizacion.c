@@ -9,7 +9,7 @@ void visualizacion_registro(uint32_t *R, uint32_t *B, instruction_t instruction)
 	keypad(stdscr, TRUE);			/* Obtener F1, F2, etc */
 	noecho();				/* No imprimir los caracteres leidos */
 	start_color();				/* Permite manejar colores */	
-	init_pair(1, COLOR_BLACK, COLOR_);	/* Pair 1 -> Texto verde fondo Negro */	
+	init_pair(1, COLOR_BLACK, COLOR_WHITE);	/* Pair 1 -> Texto verde fondo Negro */	
 	bkgd(COLOR_PAIR(1));
 	attron(COLOR_PAIR(1));			/* Activa el color verde para el texto y negro para el fondo Pair 1*/
 	move(1,32);				/* Mueve el cursor a la posición y=2, x=3*/	
