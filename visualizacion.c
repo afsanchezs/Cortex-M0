@@ -40,6 +40,7 @@ void visualizacion_registro(uint32_t *R, uint32_t *B, instruction_t instruction)
 	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	refresh();				/* Imprime en la pantalla*/
 	attroff(COLOR_PAIR(1));			/* DEshabilita los colores Pair 1 */
+	timeout(3000);
 	getch();				/* Espera entrada del usuario */
 	endwin();				/* Finaliza el modo curses */		
 	return;
