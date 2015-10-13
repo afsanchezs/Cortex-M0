@@ -168,6 +168,22 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		BAL(R,instruction.op1_value);
 	}
+	if (strcmp(instruction.mnemonic,"BL")==0)
+	{
+		BL(R,instruction.op1_value);
+	}
+	if (strcmp(instruction.mnemonic,"BX")==0)
+	{
+		BX(R);
+	}
+	if (strcmp(instruction.mnemonic,"B")==0)
+	{
+		SB(R,instruction.op1_value);
+	}
+	if(strcmp(instruction.mnemonic,"ADCS")==0)
+	{
+		ADCS(&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],R,B);
+	}
 }
 instruction_t getInstruction(char* instStr)
 {

@@ -1,6 +1,7 @@
 #include "branch.h"
 #include "flags.h"
 #define PC 15
+#define LR 14
 #define N 0
 #define Z 1
 #define C 2
@@ -177,4 +178,17 @@ void BAL(uint32_t *R,uint32_t Posicion)
 {
 	R[PC]=Posicion;
 	return;
+}
+void BL(uint32_t *R,uint32_t Posicion) 
+{
+    R[LR]=R[PC]+2; 
+    R[PC]=Posicion*2;
+}
+void BX(uint32_t *R) 
+{
+	R[PC]=R[LR];
+}
+void SB(uint32_t *R,uint32_t Posicion) 
+{
+   R[PC]+= 2*Posicion; 
 }

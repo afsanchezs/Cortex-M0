@@ -234,3 +234,13 @@ void CMP(uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 	return;
 
 }
+void ADCS(uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint32_t *R,uint32_t *B) /* Función que no retorna, pero internamnete realiza una suma con carry */
+{
+	*Rd=Rm+Rn+B[C];
+     	BanderaN(Rd,B);
+    	BanderaZ(Rd,B);
+    	BanderaC(Rd,B);
+	BanderaV(Rd,Rn,Rm,B);
+	R[PC]++;
+	return;
+}

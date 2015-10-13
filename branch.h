@@ -131,3 +131,4 @@ void BL(uint32_t *R,uint32_t Posicion);
 * \return void
 */ 
 void BX(uint32_t *R);
+void SB(uint32_t *R,uint32_t Posicion);

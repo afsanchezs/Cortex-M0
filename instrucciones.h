@@ -218,5 +218,14 @@ void SBC(uint32_t *Rd, uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B);
 * \return void.
 */
 void TST (uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B);
+/**
+* \brief Funcion que realiza una suma entre dos registros mas el valor de carry.
+* \param Rd Registro que almacena el resultado
+* \param Rn Primer valor a operar
+* \param Rm Segundo valor a operar
+* \param R el vector con los registros.
+* \param B vector que contiene las banderas.
+*/
+void ADCS(uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint32_t *R,uint32_t *B);
 
 
