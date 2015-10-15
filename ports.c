@@ -1,4 +1,4 @@
-#include "io.h"
+/*#include "io.h"
 
 extern uint8_t irq[16];	// Arreglo de interrupciones
 						// Cada elemento es una interrupción por pin
@@ -31,4 +31,4 @@ int main(void)
 	endwin();
 
 	return 0;
-}
+}*/

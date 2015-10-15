@@ -37,9 +37,18 @@ void PUSH(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
 }
 void POP(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
 {
-	
-
-
-
-
+	uint8_t address;
+	uint32_t i=15;
+	uint8_t H;
+	H=(BitCount(registers_list));
+	address=*SP-(4*(H));
+	for(i=15;i<=0;i--)
+	{
+		if(registers_list[i]==1)
+		{
+			R[i]=RAM[address];
+		}
+	address-=4;
+	}
+	SP=SP+4*(BitCount(registers_list));
 }
