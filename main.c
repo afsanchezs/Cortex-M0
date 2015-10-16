@@ -6,6 +6,7 @@
 #include "decoder.h"
 #include "flags.h"
 #include "SRAM.h"
+#include "io.h"
 #define PC 15
 /**
 *\ Arreglo registro[] Datos recibidos del microcontrolador.

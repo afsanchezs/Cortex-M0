@@ -4,6 +4,7 @@
 #include <ncurses.h>
 #include "flags.h"
 #include "decoder.h"
+#include "io.h"
 /**
 *\ brief Funcion para visualizar los registros
 *\ param *R Puntero que señala la posicion de los registros almacenados.
