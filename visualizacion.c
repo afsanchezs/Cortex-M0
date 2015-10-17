@@ -1,9 +1,9 @@
 #include "visualizacion.h"
 #define PC 15
-void visualizacion_registro(uint32_t *R, uint32_t *B, instruction_t instruction)
+void visualizacion_registro(uint32_t *R, uint32_t *B, uint8_t *RAM, instruction_t instruction)
 {
 	char op;
-	uint8_t data;	
+	uint8_t data;
 	uint32_t i;			 	// i es equivalente a un contador// 		
 	initscr();				/* Inicia modo curses */
 	curs_set(0);				/* Cursor Invisible */
@@ -63,9 +63,33 @@ void visualizacion_registro(uint32_t *R, uint32_t *B, instruction_t instruction)
 	clear();
 	move(1,32);				/* Mueve el cursor a la posición y=2, x=3*/	
 	printw("EMULADOR CORTEX M0");
+	move(2,35);
+	printw("MEMORIA SRAM");	/* Se coloca un Titulo para indicar donde están los registros */
+	for (i=0;i<=7;i++)
+		{
+			move((5+2*i),2);		
+			printw("0x%x=%x",63-i,RAM[63-i]);
+			move((5+2*i),12);
+			printw("0x%x=%x",55-i,RAM[55-i]);
+			move((5+2*i),22);		
+			printw("0x%x=%x",47-i,RAM[47-i]);
+			move((5+2*i),32);
+			printw("0x%x=%x",39-i,RAM[39-i]);
+			move((5+2*i),42);		
+			printw("0x%x=%x",31-i,RAM[31-i]);
+			move((5+2*i),52);
+			printw("0x%x=%x",23-i,RAM[23-i]);
+			move((5+2*i),62);		
+			printw("0x%x=%x",15-i,RAM[15-i]);
+			move((5+2*i),72);
+			printw("0x%x=%x",7-i,RAM[7-i]);
+		}
+	move(21,26);
+	printw("Pulse una tecla para regresar");	
 	border( ACS_VLINE, ACS_VLINE, ACS_HLINE, ACS_HLINE,ACS_ULCORNER, ACS_URCORNER,ACS_LLCORNER, ACS_LRCORNER);
 	refresh();				/* Imprime en la pantalla*/
 	getch();
+	clear();
 	}
 	if((op=='p')||(op=='P'))
 	{

@@ -11,4 +11,4 @@
 *\ param  *Banderas Corresponde a las banderas Cero, Negativo, Acarreo y Sobreflujo.
 *\ return void 
 */
-void visualizacion_registro(uint32_t *R, uint32_t *B, instruction_t instruction);
+void visualizacion_registro(uint32_t *R, uint32_t *B, uint8_t *RAM, instruction_t instruction);
