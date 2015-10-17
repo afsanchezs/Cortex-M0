@@ -131,4 +131,10 @@ void BL(uint32_t *R,uint32_t Posicion);
 * \return void
 */ 
 void BX(uint32_t *R);
+/** 
+* \ brief Funcion que incrementa la posicion en 2
+* \ param PC puntero a el registro PC
+* \ param Posicion siguiente posicion
+* \ return void
+*/
 void SB(uint32_t *R,uint32_t Posicion);
