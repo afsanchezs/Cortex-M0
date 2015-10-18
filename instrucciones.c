@@ -118,15 +118,16 @@ void LSRS(uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B)
 }
 void ROR(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
-	/**Rd=*Rd>>32;
-   	Rn=Rn<<32;
-   	*Rd=*Rd||Rn;
-   	BanderaN(*Rd,*B);
-	BanderaZ(*Rd,*B);
-	BanderaC(*Rd,*B);
-	Banderas[V]=0;
+    	uint32_t Rx,Ry;
+    	Rx=*Rd>>Rn;        
+    	Ry=*Rd<<(32-Rn);
+    	*Rd=Rx+Ry;
+	BanderaN(Rd,B);
+	BanderaZ(Rd,B);
+	BanderaC(Rd,B);
+	B[V]=0;
 	R[PC]++;
-	return;*/
+	return;
 }
 void ASRS(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
