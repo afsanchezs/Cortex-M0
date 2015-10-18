@@ -188,6 +188,11 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		ROR(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
+	if(strcmp(instruction.mnemonic,"TST")==0)
+	{
+		TST(R[instruction.op1_value],R[instruction.op2_value],R,B);
+	}
+
 }
 instruction_t getInstruction(char* instStr)
 {

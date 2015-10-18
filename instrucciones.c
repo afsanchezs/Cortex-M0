@@ -65,6 +65,20 @@ void AND (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 	R[PC]++;
 	return;		
 }
+void TST (uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
+{
+    	uint32_t Rd,*Rx;    	
+	Rd=Rn & Rm;
+	Rx=&Rd;
+    	BanderaN(Rx,B);
+    	BanderaZ(Rx,B);
+    	BanderaC(Rx,B);
+    	BanderaV(Rx,Rn,Rm,B);
+    	R[PC]++;
+    	return;
+
+
+}
 void SUB (uint32_t *Rd,uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B)
 {
 	*Rd=Rn-Rm;	// Esta operación es para realizar la resta entre dos regitros 

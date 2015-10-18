@@ -217,7 +217,7 @@ void SBC(uint32_t *Rd, uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B);
 * \param *B Es el puntero que almacenas los resultados de las *B
 * \return void.
 */
-void TST (uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B);
+void TST (uint32_t Rn, uint32_t Rm, uint32_t *R, uint32_t *B);
 /**
 * \brief Funcion que realiza una suma entre dos registros mas el valor de carry.
 * \param Rd Registro que almacena el resultado
