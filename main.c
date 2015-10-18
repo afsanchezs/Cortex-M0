@@ -29,7 +29,7 @@ int main()
 	}
 	for (i=0;i<=64;i++)
 	{	
-		sram[i]=255;	
+		sram[i]=00;	
 	}
 		num_instructions = readFile("code.txt", &read);
 		if(num_instructions==-1)
