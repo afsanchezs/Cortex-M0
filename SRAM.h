@@ -26,7 +26,7 @@ uint8_t BitCount(uint8_t  registers_list[]);
 void POP(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[]);
 /**
 * \ brief 
-* \ param R vector que conttiene los registros
+* \ param R vector que contiene los registros
 * \ param Rd Registro de almacenamiento
 * \ param Rn Primer operando
 * \ param Rm Segundo operando 
@@ -36,7 +36,7 @@ void POP(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[]);
 void LDR(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 /**
 * \ brief 
-* \ param R vector que conttiene los registros
+* \ param R vector que contiene los registros
 * \ param Rd Registro de almacenamiento
 * \ param Rn Primer operando
 * \ param Rm Segundo operando 
@@ -46,7 +46,7 @@ void LDR(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 void LDRB(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 /**
 * \ brief 
-* \ param R vector que conttiene los registros
+* \ param R vector que contiene los registros
 * \ param Rd Registro de almacenamiento
 * \ param Rn Primer operando
 * \ param Rm Segundo operando 
@@ -56,7 +56,7 @@ void LDRB(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 void LDRH(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 /**
 * \ brief 
-* \ param R vector que conttiene los registros
+* \ param R vector que contiene los registros
 * \ param Rd Registro de almacenamiento
 * \ param Rn Primer operando
 * \ param Rm Segundo operando 
@@ -66,7 +66,7 @@ void LDRH(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 void LDRSB(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 /**
 * \ brief 
-* \ param R vector que conttiene los registros
+* \ param R vector que contiene los registros
 * \ param Rd Registro de almacenamiento
 * \ param Rn Primer operando
 * \ param Rm Segundo operando 
@@ -76,27 +76,27 @@ void LDRSB(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 void LDRSH(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 /**
 * \ brief 
-* \ param Registro vector que conttiene los registros
+* \ param R vector que contiene los registros
 * \ param Rd Registro de almacenamiento
 * \ param Rn Primer operando
 * \ param Rm Segundo operando 
 * \ param RAM Memoria RAM
 * \ return void 
 */
-void STR(uint32_t *Registro,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
+void STR(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 /**
 * \ brief 
-* \ param Registro vector que conttiene los registros
+* \ param R vector que contiene los registros
 * \ param Rd Registro de almacenamiento
 * \ param Rn Primer operando
 * \ param Rm Segundo operando 
 * \ param RAM Memoria RAM
 * \ return void 
 */
-void STRB(uint32_t *Registro,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
+void STRB(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM);
 /**
 * \ brief 
-* \ param Registro vector que conttiene los registros
+* \ param Registro vector que contiene los registros
 * \ param Rd Registro de almacenamiento
 * \ param Rn Primer operando
 * \ param Rm Segundo operando 
