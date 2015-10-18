@@ -1,5 +1,8 @@
 #include <stdint.h>
+#include <stdio.h>
+#include <stdint.h>
 #define Mema 64
+#define PC 15
 /**
 * \ brief Funcion que almacena los registros en la SRAM
 * \ param SP Puntero de pila
