@@ -104,10 +104,10 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		REV16(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
-/*	if(strcmp(instruction.mnemonic,"REVSH")==0)
+	if(strcmp(instruction.mnemonic,"REVSH")==0)
 	{
 		REVSH(&R[instruction.op1_value],R[instruction.op2_value],R,B);
-	}*/
+	}
 	if (strcmp(instruction.mnemonic,"BEQ")==0)
 	{
 		BEQ(B,R,instruction.op1_value);
@@ -183,6 +183,10 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	if(strcmp(instruction.mnemonic,"ADCS")==0)
 	{
 		ADCS(&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],R,B);
+	}
+	if(strcmp(instruction.mnemonic,"ROR")==0)
+	{
+		ROR(&R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
 }
 instruction_t getInstruction(char* instStr)

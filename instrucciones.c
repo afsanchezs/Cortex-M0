@@ -163,6 +163,30 @@ void REV16(uint32_t *Rd,uint32_t Rn,uint32_t *R, uint32_t *B)
 	R[PC]++;
 	return;
 }
+void REVSH(uint32_t *Rd, uint32_t Rn, uint32_t *R, uint32_t *B)
+{
+   	uint32_t Rx,Ry=~0,RX;
+	Rx=Rn<<16;
+	Rx=Rx>>24;
+	RX=Rn<<24;
+	RX=RX>>31;
+	if(RX==1)
+	{
+		Ry=Ry<<8;
+		*Rd=Rx+Ry;
+	}
+	else
+    	{
+	*Rd=Rx;
+	BanderaN(Rd,B);
+	BanderaZ(Rd,B);
+	BanderaC(Rd,B);
+	B[V]=0;
+	R[PC]++;
+	return;
+	} 
+
+ }
 void BICS(uint32_t *Rd,uint32_t Rn, uint32_t *R, uint32_t *B)
 {
 	*Rd&=~Rn; 	// El simbolo "~" realiza el complemento de un registro, por lo tanto esta funcion realiza una operacion AND entre un registro y el complemento del registro de ingreso.
