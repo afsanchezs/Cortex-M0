@@ -50,6 +50,8 @@ void visualizacion_registro(uint32_t *R, uint32_t *B, uint8_t *RAM, instruction_
 	}	
 	move(14,58);
 	printw("PC:%d",R[PC]);
+	move(14,64);
+	printw("SP:%d",R[SP]);
 	move(19,2);	
 	printw("R:SRAM");
 	move(19,15);	

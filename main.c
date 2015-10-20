@@ -8,6 +8,7 @@
 #include "SRAM.h"
 #include "io.h"
 #define PC 15
+#define SP 14
 /**
 *\ Arreglo registro[] Datos recibidos del microcontrolador.
 *\ Variable i Contador.
@@ -27,9 +28,10 @@ int main()
 	{	
 		registro[i]=0;	
 	}
+	registro[SP]=64;
 	for (i=0;i<=64;i++)
 	{	
-		sram[i]=00;	
+		sram[i]=0;	
 	}
 		num_instructions = readFile("code.txt", &read);
 		if(num_instructions==-1)
@@ -40,7 +42,7 @@ int main()
 	while (contador<num_instructions)
 	{
 		instruction = getInstruction(instructions[R[PC]]); // Instrucción en la posición 0
-		decodeInstruction(instruction, R, B); // Debe ser modificada de acuerdo a cada código
+		decodeInstruction(instruction,R,B,RAM); // Debe ser modificada de acuerdo a cada código
 		visualizacion_registro(R,B,RAM,instruction);
 		contador++;
 		

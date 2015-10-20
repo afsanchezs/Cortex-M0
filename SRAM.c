@@ -13,32 +13,32 @@ uint8_t BitCount(uint8_t  registers_list[])
 return cont;
 
 }
-void PUSH(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
+void PUSH(uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
 {
 	uint8_t address;
 	uint32_t i=0;
 	uint8_t H;
 	H=(BitCount(registers_list));
-	address=*SP+(4*(H));
+	address=R[SP]-(4*(H));
 	for(i=0;i<=15;i++)
 	{
 		if (registers_list[i]==1)
 		{
-			RAM[address]=R[i];
+			RAM[0]=R[i];
 		}
 	address+=4;
 
 	}
-	SP=SP-4*(BitCount(registers_list));
-
+	R[SP]=R[SP]-4*(BitCount(registers_list));
+	R[PC]++;
 }
-void POP(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
+void POP(uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
 {
 	uint8_t address;
 	uint32_t i=15;
 	uint8_t H;
 	H=(BitCount(registers_list));
-	address=*SP-(4*(H));
+	address=R[SP]-(4*(H));
 	for(i=15;i<=0;i--)
 	{
 		if(registers_list[i]==1)
@@ -47,7 +47,8 @@ void POP(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[])
 		}
 	address-=4;
 	}
-	SP=SP+4*(BitCount(registers_list));
+	R[SP]=R[SP]+4*(BitCount(registers_list));
+	R[PC]++;
 }
 
 void LDR(uint32_t *R,uint32_t *Rd,uint32_t Rn,uint32_t Rm,uint8_t *RAM)

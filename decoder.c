@@ -2,7 +2,7 @@
 #include "SRAM.h"
 #include "flags.h"
 #include "branch.h" 
-void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
+void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B,uint8_t *RAM)
 {
 	if( strcmp(instruction.mnemonic,"ADDS") == 0 )
 	{
@@ -192,7 +192,46 @@ void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B)
 	{
 		TST(R[instruction.op1_value],R[instruction.op2_value],R,B);
 	}
-
+	if(strcmp(instruction.mnemonic,"LDR")==0)
+	{
+		LDR(R,&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],RAM);
+	}
+	if(strcmp(instruction.mnemonic,"LDRB")==0)
+	{
+		LDRB(R,&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],RAM);
+	}
+	if(strcmp(instruction.mnemonic,"LDRH")==0)
+	{
+		LDRH(R,&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],RAM);
+	}
+	if(strcmp(instruction.mnemonic,"LDRSB")==0)
+	{
+		LDRSB(R,&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],RAM);
+	}
+	if(strcmp(instruction.mnemonic,"LDRSH")==0)
+	{
+		LDRSH(R,&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],RAM);
+	}
+	if(strcmp(instruction.mnemonic,"STR")==0)
+	{
+		STR(R,&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],RAM);
+	}
+	if(strcmp(instruction.mnemonic,"STRB")==0)
+	{
+		STRB(R,&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],RAM);
+	}
+	if(strcmp(instruction.mnemonic,"STRH")==0)
+	{
+		STRH(R,&R[instruction.op1_value],R[instruction.op2_value],R[instruction.op3_value],RAM);
+	}
+	if(strcmp(instruction.mnemonic,"PUSH")==0)
+	{
+		PUSH(R,RAM,instruction.registers_list);
+	}
+	if(strcmp(instruction.mnemonic,"POP")==0)
+	{
+		POP(R,RAM,instruction.registers_list);
+	}	
 }
 instruction_t getInstruction(char* instStr)
 {

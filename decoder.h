@@ -8,7 +8,7 @@
 #include "instrucciones.h"
 #include "SRAM.h"
 #include "branch.h"
-
+#define SP 14
 
 typedef struct
 {
@@ -33,7 +33,7 @@ typedef struct
     \brief Decodifica la instrucción y la ejecuta.
     \param instruction instrucción a decodificar y ejecutar.
 */
-void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B);
+void decodeInstruction(instruction_t instruction,uint32_t *R, uint32_t *B,uint8_t *RAM);
 
 /** \fn instruction_t getInstruction(char* instStr)
     \brief Obtiene la instrucción separada por partes.

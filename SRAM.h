@@ -3,6 +3,7 @@
 #include <stdint.h>
 #define Mema 64
 #define PC 15
+#define SP 14
 /**
 * \ brief Funcion que almacena los registros en la SRAM
 * \ param SP Puntero de pila
@@ -11,7 +12,7 @@
 * \ param registers_list Registros que se requieren ingresar.
 * \ return void
 */
-void PUSH(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[]);
+void PUSH(uint32_t *R,uint8_t *RAM,uint8_t  registers_list[]);
 /**
 * \ brief Funcion que cuenta cuantos bits estan en 1
 * \ param  registers_list Registros a los que se les va a realizar la operacion
@@ -26,7 +27,7 @@ uint8_t BitCount(uint8_t  registers_list[]);
 * \ param registers_list Registros que se van a sacar.
 * \ return void
 */ 
-void POP(uint8_t *SP,uint32_t *R,uint8_t *RAM,uint8_t  registers_list[]);
+void POP(uint32_t *R,uint8_t *RAM,uint8_t  registers_list[]);
 /**
 * \ brief 
 * \ param R vector que contiene los registros
