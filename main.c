@@ -31,7 +31,7 @@ int main()
 	registro[SP]=64;
 	for (i=0;i<=64;i++)
 	{	
-		sram[i]=0;	
+		sram[i]=i;	
 	}
 		num_instructions = readFile("code.txt", &read);
 		if(num_instructions==-1)
